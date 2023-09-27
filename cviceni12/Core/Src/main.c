@@ -89,9 +89,9 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+
   uint32_t pole = 0b01010100111011101110010101000000;
-  uint8_t i = 0;
-  int bit;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,9 +100,9 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-	  for (i = 1; i < 32; ++i)
+	  for (uint8_t i = 1; i < 32; ++i)
 	  {
-		  bit = (pole >> i) & 1;
+		  uint8_t bit = (pole >> i) & 1;
 		  if (bit == 0)
 		  {
 			  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);

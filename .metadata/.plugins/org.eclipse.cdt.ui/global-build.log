@@ -52,3 +52,596 @@ arm-none-eabi-size   cviceni12.elf
    2360	     12	   1564	   3936	    f60	cviceni12.elf
 Finished building: default.size.stdout
  
+15:45:11 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:92:11: warning: unused variable 'pole' [-Wunused-variable]
+   92 |   uint8_t pole[32] = "10101001110111011100101010000000";
+      |           ^~~~
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2424	     12	   1564	   4000	    fa0	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+15:51:15 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:15: error: 'i' undeclared (first use in this function)
+  100 |           for(i = 1; count <= 32; ++count)
+      |               ^
+../Core/Src/main.c:100:15: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:100:22: error: 'count' undeclared (first use in this function)
+  100 |           for(i = 1; count <= 32; ++count)
+      |                      ^~~~~
+../Core/Src/main.c:161:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  161 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:221:13: error: invalid storage class for function 'MX_GPIO_Init'
+  221 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:281:1: error: expected declaration or statement at end of input
+  281 | }
+      | ^
+../Core/Src/main.c:92:11: warning: variable 'pole' set but not used [-Wunused-but-set-variable]
+   92 |   uint8_t pole[32] = "10101001110111011100101010000000";
+      |           ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' used but never defined
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' used but never defined
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:272:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  272 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:221:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  221 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:161:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  161 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:121:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  121 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:51:34 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:15: error: 'i' undeclared (first use in this function)
+  100 |           for(i = 1; i <= 32; ++i)
+      |               ^
+../Core/Src/main.c:100:15: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:161:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  161 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:221:13: error: invalid storage class for function 'MX_GPIO_Init'
+  221 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:281:1: error: expected declaration or statement at end of input
+  281 | }
+      | ^
+../Core/Src/main.c:92:11: warning: variable 'pole' set but not used [-Wunused-but-set-variable]
+   92 |   uint8_t pole[32] = "10101001110111011100101010000000";
+      |           ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' used but never defined
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' used but never defined
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:272:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  272 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:221:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  221 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:161:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  161 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:121:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  121 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:52:05 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:31: warning: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  103 |                   if (pole[i] = "0")
+      |                               ^
+../Core/Src/main.c:103:23: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  103 |                   if (pole[i] = "0")
+      |                       ^~~~
+../Core/Src/main.c:162:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  162 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:222:13: error: invalid storage class for function 'MX_GPIO_Init'
+  222 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:282:1: error: expected declaration or statement at end of input
+  282 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' used but never defined
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' used but never defined
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:273:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  273 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:222:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  222 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:162:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  162 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  122 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:52:19 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:23: error: called object 'pole' is not a function or function pointer
+  103 |                   if (pole(i) = "0")
+      |                       ^~~~
+../Core/Src/main.c:92:11: note: declared here
+   92 |   uint8_t pole[32] = "10101001110111011100101010000000";
+      |           ^~~~
+../Core/Src/main.c:162:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  162 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:222:13: error: invalid storage class for function 'MX_GPIO_Init'
+  222 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:282:1: error: expected declaration or statement at end of input
+  282 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' used but never defined
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' used but never defined
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:273:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  273 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:222:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  222 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:162:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  162 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  122 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:54:27 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:31: warning: comparison between pointer and integer
+  103 |                   if (pole[i] == "0")
+      |                               ^~
+../Core/Src/main.c:103:31: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../Core/Src/main.c:162:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  162 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:222:13: error: invalid storage class for function 'MX_GPIO_Init'
+  222 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:282:1: error: expected declaration or statement at end of input
+  282 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' used but never defined
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' used but never defined
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:273:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  273 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:222:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  222 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:162:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  162 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  122 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:55:33 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:92:22: warning: integer constant is too large for its type
+   92 |   uint8_t pole[32] = 10101001110111011100101010000000;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:22: error: invalid initializer
+../Core/Src/main.c:103:23: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  103 |                   if (pole[i] = 0)
+      |                       ^~~~
+../Core/Src/main.c:162:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  162 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:222:13: error: invalid storage class for function 'MX_GPIO_Init'
+  222 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:282:1: error: expected declaration or statement at end of input
+  282 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' used but never defined
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' used but never defined
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:273:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  273 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:222:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  222 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:162:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  162 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  122 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:56:08 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:92:22: warning: integer constant is too large for its type
+   92 |   uint8_t pole[32] = 10101001110111011100101010000000;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:22: error: invalid initializer
+../Core/Src/main.c:102:23: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  102 |                   if (pole[i] = 0)
+      |                       ^~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:56:16 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:92:22: warning: integer constant is too large for its type
+   92 |   uint8_t pole[32] = 10101001110111011100101010000000;
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:92:22: error: invalid initializer
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:56:35 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:31: warning: comparison between pointer and integer
+  102 |                   if (pole[i] == "0")
+      |                               ^~
+../Core/Src/main.c:102:31: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../Core/Src/main.c:102:27: warning: 'i' is used uninitialized [-Wuninitialized]
+  102 |                   if (pole[i] == "0")
+      |                       ~~~~^~~
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2452	     12	   1564	   4028	    fbc	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+15:56:59 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:14: error: expected ';' before 'if'
+  101 |           i++
+      |              ^
+      |              ;
+  102 |                   if (pole[i] == "0")
+      |                   ~~
+../Core/Src/main.c:92:11: warning: unused variable 'pole' [-Wunused-variable]
+   92 |   uint8_t pole[32] = "10101001110111011100101010000000";
+      |           ^~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:57:07 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:102:31: warning: comparison between pointer and integer
+  102 |                   if (pole[i] == "0")
+      |                               ^~
+../Core/Src/main.c:102:31: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../Core/Src/main.c:101:12: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  101 |           i++;
+      |           ~^~
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2456	     12	   1564	   4032	    fc0	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+15:58:13 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:104:31: warning: comparison between pointer and integer
+  104 |                   if (pole[i] == "0")
+      |                               ^~
+../Core/Src/main.c:104:31: warning: comparison with string literal results in unspecified behavior [-Waddress]
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2464	     12	   1564	   4040	    fc8	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+15:58:20 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-size   cviceni12.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2464	     12	   1564	   4040	    fc8	cviceni12.elf
+Finished building: default.size.stdout
+ 
+16:01:16 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:23: warning: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  101 |           if (pole[2] = "0")
+      |                       ^
+../Core/Src/main.c:101:15: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  101 |           if (pole[2] = "0")
+      |               ^~~~
+../Core/Src/main.c:93:11: warning: unused variable 'i' [-Wunused-variable]
+   93 |   uint8_t i = 0;
+      |           ^
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2392	     12	   1564	   3968	    f80	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:01:41 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-size   cviceni12.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2392	     12	   1564	   3968	    f80	cviceni12.elf
+Finished building: default.size.stdout
+ 
+16:01:59 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:23: warning: assignment to 'uint8_t' {aka 'unsigned char'} from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  101 |           if (pole[1] = "0")
+      |                       ^
+../Core/Src/main.c:101:15: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+  101 |           if (pole[1] = "0")
+      |               ^~~~
+../Core/Src/main.c:93:11: warning: unused variable 'i' [-Wunused-variable]
+   93 |   uint8_t i = 0;
+      |           ^
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2392	     12	   1564	   3968	    f80	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:02:31 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:11: warning: unused variable 'i' [-Wunused-variable]
+   93 |   uint8_t i = 0;
+      |           ^
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2360	     12	   1564	   3936	    f60	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:02:37 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-size   cviceni12.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2360	     12	   1564	   3936	    f60	cviceni12.elf
+Finished building: default.size.stdout
+ 
+16:02:53 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:11: warning: unused variable 'i' [-Wunused-variable]
+   93 |   uint8_t i = 0;
+      |           ^
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2360	     12	   1564	   3936	    f60	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:03:50 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:23: warning: comparison between pointer and integer
+  101 |           if (pole[1] == "1")
+      |                       ^~
+../Core/Src/main.c:101:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../Core/Src/main.c:93:11: warning: unused variable 'i' [-Wunused-variable]
+   93 |   uint8_t i = 0;
+      |           ^
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2384	     12	   1564	   3960	    f78	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:04:52 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:11: error: unknown type name 'printf'
+  101 |           printf pole[1]
+      |           ^~~~~~
+../Core/Src/main.c:21:1: note: 'printf' is defined in header '<stdio.h>'; did you forget to '#include <stdio.h>'?
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:104:3: error: expected '=', ',', ';', 'asm' or '__attribute__' before '}' token
+  104 |   }
+      |   ^
+../Core/Src/main.c:152:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  152 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:212:13: error: invalid storage class for function 'MX_GPIO_Init'
+  212 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:272:1: error: expected declaration or statement at end of input
+  272 | }
+      | ^
+../Core/Src/main.c:93:11: warning: unused variable 'i' [-Wunused-variable]
+   93 |   uint8_t i = 0;
+      |           ^
+../Core/Src/main.c:92:11: warning: unused variable 'pole' [-Wunused-variable]
+   92 |   uint8_t pole[32] = "10101001110111011100101010000000";
+      |           ^~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' used but never defined
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_USART2_UART_Init' used but never defined
+   51 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:263:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  263 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:212:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  212 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:152:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  152 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:112:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  112 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:09:47 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:41: error: expected ';' before '}' token
+  107 |                           LL_mDelay(200)
+      |                                         ^
+      |                                         ;
+  108 |                   }else
+      |                   ~                      
+../Core/Src/main.c:111:41: error: expected ';' before '}' token
+  111 |                           LL_mDelay(200)
+      |                                         ^
+      |                                         ;
+  112 |                   }
+      |                   ~                      
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:09:56 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2444	     12	   1564	   4020	    fb4	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:09:59 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-size   cviceni12.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2444	     12	   1564	   4020	    fb4	cviceni12.elf
+Finished building: default.size.stdout
+ 
+16:11:02 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2444	     12	   1564	   4020	    fb4	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 

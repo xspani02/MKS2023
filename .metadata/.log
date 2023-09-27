@@ -22,3 +22,8 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2023-09-27 15:26:56.081
 !MESSAGE Indexed 'cviceni12' (12 sources, 74 headers) in 0.648 sec: 3,746 declarations; 11,987 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.013%)
+
+!ENTRY org.eclipse.core.resources 2 2 2023-09-27 15:37:35.187
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2023-09-27 15:37:35.187
+!MESSAGE The project description file (.project) for 'cviceni1' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.

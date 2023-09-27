@@ -89,7 +89,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-  int pole = 0b01010100111011101110010101000000;
+  uint32_t pole = 0b01010100111011101110010101000000;
   uint8_t i = 0;
   int bit;
   /* USER CODE END 2 */

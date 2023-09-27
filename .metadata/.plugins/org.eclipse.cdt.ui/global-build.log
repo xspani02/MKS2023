@@ -741,3 +741,60 @@ arm-none-eabi-size   cviceni12.elf
    2392	     12	   1564	   3968	    f80	cviceni12.elf
 Finished building: default.size.stdout
  
+16:43:45 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:92:18: warning: unsigned conversion from 'int' to 'uint8_t' {aka 'unsigned char'} changes value from '1424942400' to '64' [-Woverflow]
+   92 |   uint8_t pole = 0b01010100111011101110010101000000;
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2384	     12	   1564	   3960	    f78	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:44:09 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:92:19: warning: unsigned conversion from 'int' to 'uint16_t' {aka 'short unsigned int'} changes value from '1424942400' to '58688' [-Woverflow]
+   92 |   uint16_t pole = 0b01010100111011101110010101000000;
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2392	     12	   1564	   3968	    f80	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:44:20 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni12.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKSspanik\MKS2023\cviceni12\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni12.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni12.elf
+ 
+arm-none-eabi-size   cviceni12.elf 
+arm-none-eabi-objdump -h -S  cviceni12.elf  > "cviceni12.list"
+   text	   data	    bss	    dec	    hex	filename
+   2392	     12	   1564	   3968	    f80	cviceni12.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni12.list
+ 
+16:44:32 **** Incremental Build of configuration Debug for project cviceni12 ****
+make -j4 all 
+arm-none-eabi-size   cviceni12.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2392	     12	   1564	   3968	    f80	cviceni12.elf
+Finished building: default.size.stdout
+ 

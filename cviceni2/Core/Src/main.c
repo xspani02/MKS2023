@@ -34,6 +34,8 @@
  #define LED_TIME_BLINK 300
  #define LED_TIME_SHORT 100
  #define LED_TIME_LONG 1000
+ #define DT 40
+ #define DT1 5
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -60,47 +62,62 @@ static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN 0 */
 volatile uint32_t Tick;
 static uint32_t old_s2;
-static uint32_t old_s1;
+/*static uint32_t old_s1;
+ */
 static uint32_t off_time;
+static uint16_t debounce = 0xFFFF;
 
 
-void blikac(void)
-{
-	 static uint32_t delay;
+void blikac(void) {
+	static uint32_t delay;
 
-	 if (Tick > delay + LED_TIME_BLINK) {
-		 LL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-		 delay = Tick;
-	 }
+	if (Tick > delay + LED_TIME_BLINK) {
+		LL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+		delay = Tick;
+	}
 }
 
-void tlacitka(void)
-{
-	 static uint32_t delay1;
+void tlacitka(void) {
+	static uint32_t delay1;
+	static uint32_t delay2;
+	if (Tick > delay1 + DT) {
+		uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
+		/*
+		 * uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+		 */
+		if (old_s2 && !new_s2) { // falling edge
+			off_time = Tick + LED_TIME_SHORT;
+			LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+		}
+		old_s2 = new_s2;
 
-	 if (Tick > delay1 + 40)
-	 {
-		 uint32_t new_s2 = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
-		 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
-
-		 if (old_s2 && !new_s2) { // falling edge
-			 off_time = Tick + LED_TIME_SHORT;
-			 LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
-		 }
-		 old_s2 = new_s2;
-
+		/*
 		 if (old_s1 && !new_s1) { // falling edge
-			 off_time = Tick + LED_TIME_LONG;
-			 LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+		 off_time = Tick + LED_TIME_LONG;
+		 LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
 		 }
 		 old_s1 = new_s1;
 		 delay1 = Tick;
-	 }
+		 */
 
-	 if (Tick > off_time) {
-		 LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
-	 }
+	}
 
+	if (Tick > off_time) {
+		LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+	}
+
+	if (Tick > delay2 + DT1) {
+		debounce <<= 1;
+		if (LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin)) {
+			debounce |= 0x0001;
+		}
+		if (debounce == 0x7FFF) {
+
+			off_time = Tick + LED_TIME_LONG;
+			LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+			delay1 = Tick;
+		}
+	}
 
 }
 /* USER CODE END 0 */

@@ -1820,3 +1820,343 @@ Finished building: default.size.stdout
  
 Finished building: cviceni2.list
  
+16:59:27 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2684	     12	   1588	   4284	   10bc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:04:13 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2720	     16	   1592	   4328	   10e8	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:08:07 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2668	     16	   1584	   4268	   10ac	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:09:51 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+../Core/Src/main.c:109:21: error: 'new_s1' undeclared (first use in this function)
+  109 |                 if (new_s1->IDR & (1<<1)) debounce |= 0x0001;
+      |                     ^~~~~~
+../Core/Src/main.c:109:21: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:10:34 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+../Core/Src/main.c:110:27: error: invalid type argument of '->' (have 'uint32_t' {aka 'long unsigned int'})
+  110 |                 if (new_s1->IDR & (1<<1)) debounce |= 0x0001;
+      |                           ^~
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:12:10 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2668	     16	   1584	   4268	   10ac	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:13:31 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+../Core/Src/main.c:109:41: error: invalid type argument of '->' (have 'unsigned int')
+  109 |                 if (S1_GPIO_Port, S1_Pin->IDR & (1<<1)) debounce |= 0x0001;
+      |                                         ^~
+../Core/Src/main.c:109:33: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+  109 |                 if (S1_GPIO_Port, S1_Pin->IDR & (1<<1)) debounce |= 0x0001;
+      |                                 ^
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:15:05 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:80:25: warning: unused variable 'delay2' [-Wunused-variable]
+   80 |         static uint32_t delay2;
+      |                         ^~~~~~
+At top level:
+../Core/Src/main.c:80:25: warning: 'delay2' defined but not used [-Wunused-variable]
+../Core/Src/main.c:67:17: warning: 'debounce' defined but not used [-Wunused-variable]
+   67 | static uint16_t debounce = 0xFFFF;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2684	     12	   1588	   4284	   10bc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:15:23 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2684	     12	   1588	   4284	   10bc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:21:34 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+../Core/Src/main.c:107:20: error: 'delay2' undeclared (first use in this function); did you mean 'delay1'?
+  107 |         if (Tick > delay2 + DT1)
+      |                    ^~~~~~
+      |                    delay1
+../Core/Src/main.c:107:20: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:110:64: error: invalid type argument of '->' (have 'uint32_t' {aka 'long unsigned int'})
+  110 |                 if (LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin)->IDR & (1<<1)) debounce |= 0x0001;
+      |                                                                ^~
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:22:10 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+../Core/Src/main.c:107:20: error: 'delay2' undeclared (first use in this function); did you mean 'delay1'?
+  107 |         if (Tick > delay2 + DT1)
+      |                    ^~~~~~
+      |                    delay1
+../Core/Src/main.c:107:20: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:22:33 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2672	     16	   1584	   4272	   10b0	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:23:25 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2720	     16	   1584	   4320	   10e0	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:27:20 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: unused variable 'new_s1' [-Wunused-variable]
+   84 |                 uint32_t new_s1 = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                          ^~~~~~
+At top level:
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2700	     16	   1584	   4300	   10cc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:28:26 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:65:17: warning: 'old_s1' defined but not used [-Wunused-variable]
+   65 | static uint32_t old_s1;
+      |                 ^~~~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2700	     16	   1584	   4300	   10cc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:28:49 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2700	     16	   1584	   4300	   10cc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:30:08 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2700	     16	   1584	   4300	   10cc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:36:15 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2700	     16	   1584	   4300	   10cc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+17:36:44 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2700	     16	   1584	   4300	   10cc	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 

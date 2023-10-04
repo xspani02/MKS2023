@@ -1364,3 +1364,53 @@ Finished building: default.size.stdout
  
 Finished building: cviceni2.list
  
+15:55:04 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+15:56:52 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+15:57:05 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-size   cviceni2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+16:03:00 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 

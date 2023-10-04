@@ -819,3 +819,548 @@ arm-none-eabi-size   cviceni12.elf
    2392	     12	   1564	   3968	    f80	cviceni12.elf
 Finished building: default.size.stdout
  
+15:27:02 **** Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.o"
+arm-none-eabi-gcc -mcpu=cortex-m0 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f030r8tx.d" -MT"Core/Startup/startup_stm32f030r8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f030r8tx.o" "../Core/Startup/startup_stm32f030r8tx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+../Core/Src/main.c:303:2: warning: return type defaults to 'int' [-Wimplicit-int]
+  303 |  LL_GPIO_TogglePin()
+      |  ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:303:2: error: conflicting types for 'LL_GPIO_TogglePin'; have 'int()'
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: previous definition of 'LL_GPIO_TogglePin' with type 'void(GPIO_TypeDef *, uint32_t)' {aka 'void(GPIO_TypeDef *, long unsigned int)'}
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'LL_GPIO_TogglePin':
+../Core/Src/main.c:311:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  311 | {
+      | ^
+../Core/Src/main.c:338: error: expected '{' at end of input
+../Core/Src/main.c:338: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:27:11 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f0xx.d" -MT"Core/Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f0xx.o"
+../Core/Src/main.c:303:2: warning: return type defaults to 'int' [-Wimplicit-int]
+  303 |  LL_GPIO_TogglePin()
+      |  ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:303:2: error: conflicting types for 'LL_GPIO_TogglePin'; have 'int()'
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: previous definition of 'LL_GPIO_TogglePin' with type 'void(GPIO_TypeDef *, uint32_t)' {aka 'void(GPIO_TypeDef *, long unsigned int)'}
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'LL_GPIO_TogglePin':
+../Core/Src/main.c:311:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  311 | {
+      | ^
+../Core/Src/main.c:338: error: expected '{' at end of input
+../Core/Src/main.c:338: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:27:31 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:303:2: warning: return type defaults to 'int' [-Wimplicit-int]
+  303 |  LL_GPIO_TogglePin()
+      |  ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:303:2: error: conflicting types for 'LL_GPIO_TogglePin'; have 'int()'
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: previous definition of 'LL_GPIO_TogglePin' with type 'void(GPIO_TypeDef *, uint32_t)' {aka 'void(GPIO_TypeDef *, long unsigned int)'}
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'LL_GPIO_TogglePin':
+../Core/Src/main.c:311:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  311 | {
+      | ^
+../Core/Src/main.c:338: error: expected '{' at end of input
+../Core/Src/main.c:338: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:27:52 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:303:2: warning: return type defaults to 'int' [-Wimplicit-int]
+  303 |  LL_GPIO_TogglePin()
+      |  ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:303:2: error: conflicting types for 'LL_GPIO_TogglePin'; have 'int()'
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: previous definition of 'LL_GPIO_TogglePin' with type 'void(GPIO_TypeDef *, uint32_t)' {aka 'void(GPIO_TypeDef *, long unsigned int)'}
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'LL_GPIO_TogglePin':
+../Core/Src/main.c:311:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  311 | {
+      | ^
+../Core/Src/main.c:338: error: expected '{' at end of input
+../Core/Src/main.c:338: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:27:58 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:303:2: warning: return type defaults to 'int' [-Wimplicit-int]
+  303 |  LL_GPIO_TogglePin()
+      |  ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:303:2: error: conflicting types for 'LL_GPIO_TogglePin'; have 'int()'
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: previous definition of 'LL_GPIO_TogglePin' with type 'void(GPIO_TypeDef *, uint32_t)' {aka 'void(GPIO_TypeDef *, long unsigned int)'}
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'LL_GPIO_TogglePin':
+../Core/Src/main.c:311:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  311 | {
+      | ^
+../Core/Src/main.c:338: error: expected '{' at end of input
+../Core/Src/main.c:338: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:28:55 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:303:2: warning: return type defaults to 'int' [-Wimplicit-int]
+  303 |  LL_GPIO_TogglePin()
+      |  ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:303:2: error: conflicting types for 'LL_GPIO_TogglePin'; have 'int()'
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: previous definition of 'LL_GPIO_TogglePin' with type 'void(GPIO_TypeDef *, uint32_t)' {aka 'void(GPIO_TypeDef *, long unsigned int)'}
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'LL_GPIO_TogglePin':
+../Core/Src/main.c:311:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  311 | {
+      | ^
+../Core/Src/main.c:338: error: expected '{' at end of input
+../Core/Src/main.c:338: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:30:38 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:43:1: error: unknown type name 'UART_HandleTypeDef'
+   43 | UART_HandleTypeDef huart2;
+      | ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:75:3: warning: implicit declaration of function 'HAL_Init' [-Wimplicit-function-declaration]
+   75 |   HAL_Init();
+      |   ^~~~~~~~
+../Core/Src/main.c: In function 'SystemClock_Config':
+../Core/Src/main.c:112:3: error: unknown type name 'RCC_OscInitTypeDef'
+  112 |   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:113:3: error: unknown type name 'RCC_ClkInitTypeDef'
+  113 |   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+      |   ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:118:20: error: request for member 'OscillatorType' in something not a structure or union
+  118 |   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |                    ^
+../Core/Src/main.c:118:38: error: 'RCC_OSCILLATORTYPE_HSI' undeclared (first use in this function)
+  118 |   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+      |                                      ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:118:38: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:119:20: error: request for member 'HSIState' in something not a structure or union
+  119 |   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+      |                    ^
+../Core/Src/main.c:119:32: error: 'RCC_HSI_ON' undeclared (first use in this function)
+  119 |   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+      |                                ^~~~~~~~~~
+../Core/Src/main.c:120:20: error: request for member 'HSICalibrationValue' in something not a structure or union
+  120 |   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |                    ^
+../Core/Src/main.c:120:43: error: 'RCC_HSICALIBRATION_DEFAULT' undeclared (first use in this function)
+  120 |   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+      |                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:121:20: error: request for member 'PLL' in something not a structure or union
+  121 |   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+      |                    ^
+../Core/Src/main.c:121:36: error: 'RCC_PLL_ON' undeclared (first use in this function); did you mean 'RCC_CR_PLLON'?
+  121 |   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+      |                                    ^~~~~~~~~~
+      |                                    RCC_CR_PLLON
+../Core/Src/main.c:122:20: error: request for member 'PLL' in something not a structure or union
+  122 |   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+      |                    ^
+../Core/Src/main.c:122:37: error: 'RCC_PLLSOURCE_HSI' undeclared (first use in this function); did you mean 'LL_RCC_PLLSOURCE_HSE'?
+  122 |   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+      |                                     ^~~~~~~~~~~~~~~~~
+      |                                     LL_RCC_PLLSOURCE_HSE
+../Core/Src/main.c:123:20: error: request for member 'PLL' in something not a structure or union
+  123 |   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL12;
+      |                    ^
+../Core/Src/main.c:123:34: error: 'RCC_PLL_MUL12' undeclared (first use in this function); did you mean 'LL_RCC_PLL_MUL_2'?
+  123 |   RCC_OscInitStruct.PLL.PLLMUL = RCC_PLL_MUL12;
+      |                                  ^~~~~~~~~~~~~
+      |                                  LL_RCC_PLL_MUL_2
+../Core/Src/main.c:124:20: error: request for member 'PLL' in something not a structure or union
+  124 |   RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
+      |                    ^
+../Core/Src/main.c:124:34: error: 'RCC_PREDIV_DIV1' undeclared (first use in this function); did you mean 'LL_RCC_PREDIV_DIV_1'?
+  124 |   RCC_OscInitStruct.PLL.PREDIV = RCC_PREDIV_DIV1;
+      |                                  ^~~~~~~~~~~~~~~
+      |                                  LL_RCC_PREDIV_DIV_1
+../Core/Src/main.c:125:7: warning: implicit declaration of function 'HAL_RCC_OscConfig' [-Wimplicit-function-declaration]
+  125 |   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+      |       ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:125:48: error: 'HAL_OK' undeclared (first use in this function)
+  125 |   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+      |                                                ^~~~~~
+../Core/Src/main.c:132:20: error: request for member 'ClockType' in something not a structure or union
+  132 |   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+      |                    ^
+../Core/Src/main.c:132:33: error: 'RCC_CLOCKTYPE_HCLK' undeclared (first use in this function)
+  132 |   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+      |                                 ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:132:52: error: 'RCC_CLOCKTYPE_SYSCLK' undeclared (first use in this function)
+  132 |   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+      |                                                    ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:133:32: error: 'RCC_CLOCKTYPE_PCLK1' undeclared (first use in this function)
+  133 |                               |RCC_CLOCKTYPE_PCLK1;
+      |                                ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:134:20: error: request for member 'SYSCLKSource' in something not a structure or union
+  134 |   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+      |                    ^
+../Core/Src/main.c:134:36: error: 'RCC_SYSCLKSOURCE_PLLCLK' undeclared (first use in this function); did you mean 'LL_RCC_SYS_CLKSOURCE_PLL'?
+  134 |   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+      |                                    ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                    LL_RCC_SYS_CLKSOURCE_PLL
+../Core/Src/main.c:135:20: error: request for member 'AHBCLKDivider' in something not a structure or union
+  135 |   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |                    ^
+../Core/Src/main.c:135:37: error: 'RCC_SYSCLK_DIV1' undeclared (first use in this function); did you mean 'LL_RCC_SYSCLK_DIV_1'?
+  135 |   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+      |                                     ^~~~~~~~~~~~~~~
+      |                                     LL_RCC_SYSCLK_DIV_1
+../Core/Src/main.c:136:20: error: request for member 'APB1CLKDivider' in something not a structure or union
+  136 |   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+      |                    ^
+../Core/Src/main.c:136:38: error: 'RCC_HCLK_DIV1' undeclared (first use in this function)
+  136 |   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
+      |                                      ^~~~~~~~~~~~~
+../Core/Src/main.c:138:7: warning: implicit declaration of function 'HAL_RCC_ClockConfig' [-Wimplicit-function-declaration]
+  138 |   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+      |       ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:138:47: error: 'FLASH_LATENCY_1' undeclared (first use in this function); did you mean 'LL_FLASH_LATENCY_1'?
+  138 |   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+      |                                               ^~~~~~~~~~~~~~~
+      |                                               LL_FLASH_LATENCY_1
+../Core/Src/main.c: In function 'MX_USART2_UART_Init':
+../Core/Src/main.c:159:9: error: request for member 'Instance' in something not a structure or union
+  159 |   huart2.Instance = USART2;
+      |         ^
+../Core/Src/main.c:160:9: error: request for member 'Init' in something not a structure or union
+  160 |   huart2.Init.BaudRate = 38400;
+      |         ^
+../Core/Src/main.c:161:9: error: request for member 'Init' in something not a structure or union
+  161 |   huart2.Init.WordLength = UART_WORDLENGTH_8B;
+      |         ^
+../Core/Src/main.c:161:28: error: 'UART_WORDLENGTH_8B' undeclared (first use in this function)
+  161 |   huart2.Init.WordLength = UART_WORDLENGTH_8B;
+      |                            ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:162:9: error: request for member 'Init' in something not a structure or union
+  162 |   huart2.Init.StopBits = UART_STOPBITS_1;
+      |         ^
+../Core/Src/main.c:162:26: error: 'UART_STOPBITS_1' undeclared (first use in this function); did you mean 'LL_USART_STOPBITS_1'?
+  162 |   huart2.Init.StopBits = UART_STOPBITS_1;
+      |                          ^~~~~~~~~~~~~~~
+      |                          LL_USART_STOPBITS_1
+../Core/Src/main.c:163:9: error: request for member 'Init' in something not a structure or union
+  163 |   huart2.Init.Parity = UART_PARITY_NONE;
+      |         ^
+../Core/Src/main.c:163:24: error: 'UART_PARITY_NONE' undeclared (first use in this function); did you mean 'LL_USART_PARITY_NONE'?
+  163 |   huart2.Init.Parity = UART_PARITY_NONE;
+      |                        ^~~~~~~~~~~~~~~~
+      |                        LL_USART_PARITY_NONE
+../Core/Src/main.c:164:9: error: request for member 'Init' in something not a structure or union
+  164 |   huart2.Init.Mode = UART_MODE_TX_RX;
+      |         ^
+../Core/Src/main.c:164:22: error: 'UART_MODE_TX_RX' undeclared (first use in this function)
+  164 |   huart2.Init.Mode = UART_MODE_TX_RX;
+      |                      ^~~~~~~~~~~~~~~
+../Core/Src/main.c:165:9: error: request for member 'Init' in something not a structure or union
+  165 |   huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+      |         ^
+../Core/Src/main.c:165:27: error: 'UART_HWCONTROL_NONE' undeclared (first use in this function); did you mean 'LL_USART_HWCONTROL_NONE'?
+  165 |   huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+      |                           ^~~~~~~~~~~~~~~~~~~
+      |                           LL_USART_HWCONTROL_NONE
+../Core/Src/main.c:166:9: error: request for member 'Init' in something not a structure or union
+  166 |   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+      |         ^
+../Core/Src/main.c:166:30: error: 'UART_OVERSAMPLING_16' undeclared (first use in this function); did you mean 'LL_USART_OVERSAMPLING_16'?
+  166 |   huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+      |                              ^~~~~~~~~~~~~~~~~~~~
+      |                              LL_USART_OVERSAMPLING_16
+../Core/Src/main.c:167:9: error: request for member 'Init' in something not a structure or union
+  167 |   huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+      |         ^
+../Core/Src/main.c:167:32: error: 'UART_ONE_BIT_SAMPLE_DISABLE' undeclared (first use in this function)
+  167 |   huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:168:9: error: request for member 'AdvancedInit' in something not a structure or union
+  168 |   huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+      |         ^
+../Core/Src/main.c:168:40: error: 'UART_ADVFEATURE_NO_INIT' undeclared (first use in this function)
+  168 |   huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:169:7: warning: implicit declaration of function 'HAL_UART_Init'; did you mean 'LL_USART_Init'? [-Wimplicit-function-declaration]
+  169 |   if (HAL_UART_Init(&huart2) != HAL_OK)
+      |       ^~~~~~~~~~~~~
+      |       LL_USART_Init
+../Core/Src/main.c:169:33: error: 'HAL_OK' undeclared (first use in this function)
+  169 |   if (HAL_UART_Init(&huart2) != HAL_OK)
+      |                                 ^~~~~~
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:186:3: error: unknown type name 'GPIO_InitTypeDef'; did you mean 'LL_GPIO_InitTypeDef'?
+  186 |   GPIO_InitTypeDef GPIO_InitStruct = {0};
+      |   ^~~~~~~~~~~~~~~~
+      |   LL_GPIO_InitTypeDef
+../Core/Src/main.c:191:3: warning: implicit declaration of function '__HAL_RCC_GPIOC_CLK_ENABLE' [-Wimplicit-function-declaration]
+  191 |   __HAL_RCC_GPIOC_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:192:3: warning: implicit declaration of function '__HAL_RCC_GPIOF_CLK_ENABLE' [-Wimplicit-function-declaration]
+  192 |   __HAL_RCC_GPIOF_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:193:3: warning: implicit declaration of function '__HAL_RCC_GPIOA_CLK_ENABLE' [-Wimplicit-function-declaration]
+  193 |   __HAL_RCC_GPIOA_CLK_ENABLE();
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:196:3: warning: implicit declaration of function 'HAL_GPIO_WritePin'; did you mean 'LL_GPIO_WriteReg'? [-Wimplicit-function-declaration]
+  196 |   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+      |   ^~~~~~~~~~~~~~~~~
+      |   LL_GPIO_WriteReg
+../Core/Src/main.c:196:45: error: 'GPIO_PIN_RESET' undeclared (first use in this function)
+  196 |   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+      |                                             ^~~~~~~~~~~~~~
+../Core/Src/main.c:199:18: error: request for member 'Pin' in something not a structure or union
+  199 |   GPIO_InitStruct.Pin = B1_Pin;
+      |                  ^
+../Core/Src/main.c:200:18: error: request for member 'Mode' in something not a structure or union
+  200 |   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+      |                  ^
+../Core/Src/main.c:200:26: error: 'GPIO_MODE_IT_FALLING' undeclared (first use in this function)
+  200 |   GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
+      |                          ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:201:18: error: request for member 'Pull' in something not a structure or union
+  201 |   GPIO_InitStruct.Pull = GPIO_NOPULL;
+      |                  ^
+../Core/Src/main.c:201:26: error: 'GPIO_NOPULL' undeclared (first use in this function)
+  201 |   GPIO_InitStruct.Pull = GPIO_NOPULL;
+      |                          ^~~~~~~~~~~
+../Core/Src/main.c:202:3: warning: implicit declaration of function 'HAL_GPIO_Init'; did you mean 'LL_GPIO_Init'? [-Wimplicit-function-declaration]
+  202 |   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
+      |   ^~~~~~~~~~~~~
+      |   LL_GPIO_Init
+../Core/Src/main.c:205:18: error: request for member 'Pin' in something not a structure or union
+  205 |   GPIO_InitStruct.Pin = LD2_Pin;
+      |                  ^
+../Core/Src/main.c:206:18: error: request for member 'Mode' in something not a structure or union
+  206 |   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+      |                  ^
+../Core/Src/main.c:206:26: error: 'GPIO_MODE_OUTPUT_PP' undeclared (first use in this function); did you mean 'LL_GPIO_MODE_OUTPUT'?
+  206 |   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+      |                          ^~~~~~~~~~~~~~~~~~~
+      |                          LL_GPIO_MODE_OUTPUT
+../Core/Src/main.c:207:18: error: request for member 'Pull' in something not a structure or union
+  207 |   GPIO_InitStruct.Pull = GPIO_NOPULL;
+      |                  ^
+../Core/Src/main.c:208:18: error: request for member 'Speed' in something not a structure or union
+  208 |   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+      |                  ^
+../Core/Src/main.c:208:27: error: 'GPIO_SPEED_FREQ_LOW' undeclared (first use in this function); did you mean 'LL_GPIO_SPEED_FREQ_LOW'?
+  208 |   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+      |                           ^~~~~~~~~~~~~~~~~~~
+      |                           LL_GPIO_SPEED_FREQ_LOW
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:31:51 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   5356	     12	   1564	   6932	   1b14	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+15:32:25 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-size   cviceni2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5356	     12	   1564	   6932	   1b14	cviceni2.elf
+Finished building: default.size.stdout
+ 
+15:35:12 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:303:3: warning: return type defaults to 'int' [-Wimplicit-int]
+  303 |   LL_GPIO_TogglePin()
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:303:3: error: conflicting types for 'LL_GPIO_TogglePin'; have 'int()'
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: previous definition of 'LL_GPIO_TogglePin' with type 'void(GPIO_TypeDef *, uint32_t)' {aka 'void(GPIO_TypeDef *, long unsigned int)'}
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'LL_GPIO_TogglePin':
+../Core/Src/main.c:311:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  311 | {
+      | ^
+../Core/Src/main.c:338: error: expected '{' at end of input
+../Core/Src/main.c:338: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:35:22 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+../Core/Src/main.c:303:3: warning: data definition has no type or storage class
+  303 |   LL_GPIO_TogglePin();
+      |   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:303:3: warning: type defaults to 'int' in declaration of 'LL_GPIO_TogglePin' [-Wimplicit-int]
+../Core/Src/main.c:303:3: error: conflicting types for 'LL_GPIO_TogglePin'; have 'int()'
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: previous definition of 'LL_GPIO_TogglePin' with type 'void(GPIO_TypeDef *, uint32_t)' {aka 'void(GPIO_TypeDef *, long unsigned int)'}
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:35:55 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f0xx.d" -MT"Core/Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f0xx.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2504	     12	   1564	   4080	    ff0	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+15:39:04 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/stm32f0xx_it.c: In function 'EXTI0_1_IRQHandler':
+../Core/Src/stm32f0xx_it.c:155:5: error: too few arguments to function 'LL_GPIO_TogglePin'
+  155 |     LL_GPIO_TogglePin()
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/stm32f0xx_it.c:21:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: declared here
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/stm32f0xx_it.c:155:24: error: expected ';' before '}' token
+  155 |     LL_GPIO_TogglePin()
+      |                        ^
+      |                        ;
+  156 |     /* USER CODE END LL_EXTI_LINE_0 */
+  157 |   }
+      |   ~                     
+make: *** [Core/Src/subdir.mk:31: Core/Src/stm32f0xx_it.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:39:13 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/stm32f0xx_it.c: In function 'EXTI0_1_IRQHandler':
+../Core/Src/stm32f0xx_it.c:155:5: error: too few arguments to function 'LL_GPIO_TogglePin'
+  155 |     LL_GPIO_TogglePin()
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/stm32f0xx_it.c:21:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: declared here
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+../Core/Src/stm32f0xx_it.c:155:24: error: expected ';' before '}' token
+  155 |     LL_GPIO_TogglePin()
+      |                        ^
+      |                        ;
+  156 |     /* USER CODE END LL_EXTI_LINE_0 */
+  157 |   }
+      |   ~                     
+make: *** [Core/Src/subdir.mk:31: Core/Src/stm32f0xx_it.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:39:25 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/stm32f0xx_it.c: In function 'EXTI0_1_IRQHandler':
+../Core/Src/stm32f0xx_it.c:155:5: error: too few arguments to function 'LL_GPIO_TogglePin'
+  155 |     LL_GPIO_TogglePin();
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ../Core/Inc/main.h:40,
+                 from ../Core/Src/stm32f0xx_it.c:21:
+../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_ll_gpio.h:897:22: note: declared here
+  897 | __STATIC_INLINE void LL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint32_t PinMask)
+      |                      ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/stm32f0xx_it.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:42:30 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+15:42:58 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-size   cviceni2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+15:47:55 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 

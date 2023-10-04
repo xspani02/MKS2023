@@ -1414,3 +1414,222 @@ Finished building: default.size.stdout
  
 Finished building: cviceni2.list
  
+16:05:32 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:92:21: warning: unused variable 'Tick' [-Wunused-variable]
+   92 |   volatile uint32_t Tick;
+      |                     ^~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:06:51 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: warning: unused variable 'Tick' [-Wunused-variable]
+   93 |   volatile uint32_t Tick;
+      |                     ^~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:07:51 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2528	     12	   1564	   4104	   1008	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:07:58 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/stm32f0xx_it.c: In function 'EXTI0_1_IRQHandler':
+../Core/Src/stm32f0xx_it.c:156:5: error: 'Tick' undeclared (first use in this function)
+  156 |     Tick++;
+      |     ^~~~
+../Core/Src/stm32f0xx_it.c:156:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:31: Core/Src/stm32f0xx_it.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:09:20 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: warning: unused variable 'Tick' [-Wunused-variable]
+   93 |   volatile uint32_t Tick;
+      |                     ^~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f0xx_it.o: in function `EXTI0_1_IRQHandler':
+C:/Users/TEMP/Documents/spanik_MKS/MKS2023/cviceni2/Debug/../Core/Src/stm32f0xx_it.c:162: undefined reference to `Tick'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: cviceni2.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:11:28 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: warning: unused variable 'Tick' [-Wunused-variable]
+   93 |   volatile uint32_t Tick;
+      |                     ^~~~
+../Core/Src/stm32f0xx_it.c: In function 'SysTick_Handler':
+../Core/Src/stm32f0xx_it.c:129:13: warning: 'Tick' is used uninitialized [-Wuninitialized]
+  129 |         Tick++;
+      |         ~~~~^~
+../Core/Src/stm32f0xx_it.c:128:27: note: 'Tick' declared here
+  128 |         volatile uint32_t Tick;
+      |                           ^~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2536	     12	   1564	   4112	   1010	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:12:42 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f0xx_it.o: in function `SysTick_Handler':
+C:/Users/TEMP/Documents/spanik_MKS/MKS2023/cviceni2/Debug/../Core/Src/stm32f0xx_it.c:135: undefined reference to `Tick'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: cviceni2.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:13:44 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: warning: unused variable 'Tick' [-Wunused-variable]
+   93 |   volatile uint32_t Tick;
+      |                     ^~~~
+../Core/Src/stm32f0xx_it.c: In function 'SysTick_Handler':
+../Core/Src/stm32f0xx_it.c:129:13: warning: 'Tick' is used uninitialized [-Wuninitialized]
+  129 |         Tick++;
+      |         ~~~~^~
+../Core/Src/stm32f0xx_it.c:128:27: note: 'Tick' declared here
+  128 |         volatile uint32_t Tick;
+      |                           ^~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2548	     12	   1564	   4124	   101c	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:15:27 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:93:21: warning: unused variable 'Tick' [-Wunused-variable]
+   93 |   volatile uint32_t Tick;
+      |                     ^~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2548	     12	   1564	   4124	   101c	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:17:11 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:21: warning: unused variable 'Tick' [-Wunused-variable]
+  101 |   volatile uint32_t Tick;
+      |                     ^~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2548	     12	   1564	   4124	   101c	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:17:40 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:21: warning: unused variable 'Tick' [-Wunused-variable]
+  101 |   volatile uint32_t Tick;
+      |                     ^~~~
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `blikac':
+C:/Users/TEMP/Documents/spanik_MKS/MKS2023/cviceni2/Debug/../Core/Src/main.c:67: undefined reference to `Tick'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: cviceni2.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:18:04 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2608	     12	   1572	   4192	   1060	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:19:16 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni2.elf
+ 
+arm-none-eabi-size   cviceni2.elf 
+arm-none-eabi-objdump -h -S  cviceni2.elf  > "cviceni2.list"
+   text	   data	    bss	    dec	    hex	filename
+   2612	     12	   1572	   4196	   1064	cviceni2.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni2.list
+ 
+16:19:31 **** Incremental Build of configuration Debug for project cviceni2 ****
+make -j4 all 
+arm-none-eabi-size   cviceni2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2612	     12	   1572	   4196	   1064	cviceni2.elf
+Finished building: default.size.stdout
+ 

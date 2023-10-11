@@ -104,19 +104,21 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	    /*
-		for (int i = 0; i < 1000; i = i + 111)
-		{
-			sct_value(i);
-			HAL_Delay(1000);
-		}
-		*/
-		enVal = __HAL_TIM_GET_COUNTER(&htim1);
-		sct_value(enVal);
-		HAL_Delay(50);
+
     /* USER CODE BEGIN 3 */
+	  	  	/*
+	 		for (int i = 0; i < 1000; i = i + 111)
+	 		{
+	 			sct_value(i);
+	 			HAL_Delay(1000);
+	 		}
+	 		*/
+	 		enVal = __HAL_TIM_GET_COUNTER(&htim1);
+	 		sct_value(enVal);
+	 		HAL_Delay(50);
+
+	 /* USER CODE END 3 */
   }
-  /* USER CODE END 3 */
 }
 
 /**

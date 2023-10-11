@@ -2550,3 +2550,196 @@ Finished building: default.size.stdout
  
 Finished building: cviceni3.list
  
+16:17:43 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:36:31: warning: unused variable 'reg_values' [-Wunused-variable]
+   36 |         static const uint32_t reg_values[3][10] = {
+      |                               ^~~~~~~~~~
+At top level:
+../Core/Src/sct.c:36:31: warning: 'reg_values' defined but not used [-Wunused-const-variable=]
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7200	     20	   1700	   8920	   22d8	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 
+16:20:02 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:95:3: warning: implicit declaration of function 'sct_value' [-Wimplicit-function-declaration]
+   95 |   sct_value(3);
+      |   ^~~~~~~~~
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:78:9: error: 'reg' undeclared (first use in this function)
+   78 |         reg |= reg_values[0][value / 100 % 10];
+      |         ^~~
+../Core/Src/sct.c:78:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/sct.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:20:30 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:79:13: warning: 'reg' is used uninitialized [-Wuninitialized]
+   79 |         reg |= reg_values[0][value / 100 % 10];
+      |             ^~
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7392	     20	   1700	   9112	   2398	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 
+16:20:51 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-size   cviceni3.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7392	     20	   1700	   9112	   2398	cviceni3.elf
+Finished building: default.size.stdout
+ 
+16:21:21 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:95:3: warning: implicit declaration of function 'sct_value' [-Wimplicit-function-declaration]
+   95 |   sct_value(300);
+      |   ^~~~~~~~~
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7396	     20	   1700	   9116	   239c	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 
+16:22:31 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:79:13: warning: 'reg' is used uninitialized [-Wuninitialized]
+   79 |         reg |= reg_values[0][value / 100 % 10] | reg_values[1][value / 100 % 10] | reg_values[2][value / 100 % 10];
+      |             ^~
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7476	     20	   1700	   9196	   23ec	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 
+16:23:02 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:79:13: warning: 'reg' is used uninitialized [-Wuninitialized]
+   79 |         reg |= reg_values[0][value / 100 % 10] | reg_values[1][value / 10 % 10] | reg_values[2][value / 1 % 10];
+      |             ^~
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7464	     20	   1700	   9184	   23e0	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 
+16:24:10 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:95:3: warning: implicit declaration of function 'sct_value' [-Wimplicit-function-declaration]
+   95 |   sct_value(3);
+      |   ^~~~~~~~~
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:80:13: warning: 'reg' is used uninitialized [-Wuninitialized]
+   80 |         reg |= reg_values[0][value / 100 % 10] | reg_values[1][value / 10 % 10] | reg_values[2][value / 1 % 10];
+      |         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7460	     20	   1700	   9180	   23dc	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 
+16:26:57 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:80:13: warning: 'reg' is used uninitialized [-Wuninitialized]
+   80 |         reg |= reg_values[0][value / 100 % 10] | reg_values[1][value / 10 % 10] | reg_values[2][value / 1 % 10];
+      |             ^~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:104:19: warning: implicit declaration of function 'sct_value' [-Wimplicit-function-declaration]
+  104 |                   sct_value(i);
+      |                   ^~~~~~~~~
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7484	     20	   1700	   9204	   23f4	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 
+16:28:51 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:80:13: warning: 'reg' is used uninitialized [-Wuninitialized]
+   80 |         reg |= reg_values[0][value / 100 % 10] | reg_values[1][value / 10 % 10] | reg_values[2][value / 1 % 10];
+      |         ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7484	     20	   1700	   9204	   23f4	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 
+16:30:24 **** Incremental Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+arm-none-eabi-gcc -o "cviceni3.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni3\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni3.elf
+ 
+arm-none-eabi-size   cviceni3.elf 
+arm-none-eabi-objdump -h -S  cviceni3.elf  > "cviceni3.list"
+   text	   data	    bss	    dec	    hex	filename
+   7488	     20	   1700	   9208	   23f8	cviceni3.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni3.list
+ 

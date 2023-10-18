@@ -108,8 +108,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  uint16_t trim_val = 500*((raw_pot/10)/409.0);
-	  sct_value(trim_val);
+	  sct_value(501*raw_pot/4096, 9*raw_pot/4096);
 	  HAL_Delay(50);
 
     /* USER CODE BEGIN 3 */

@@ -714,3 +714,746 @@ Finished building: default.size.stdout
  
 Finished building: cviceni4.list
  
+16:20:29 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  10512	     24	   1776	  12312	   3018	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:22:22 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  10512	     24	   1776	  12312	   3018	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:30:46 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  10628	     24	   1776	  12428	   308c	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:31:37 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:66:17: warning: 'channel' defined but not used [-Wunused-variable]
+   66 | static uint32_t channel;
+      |                 ^~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  10592	     24	   1776	  12392	   3068	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:32:20 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-size   cviceni4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10592	     24	   1776	  12392	   3068	cviceni4.elf
+Finished building: default.size.stdout
+ 
+16:35:59 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  10592	     24	   1776	  12392	   3068	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:38:35 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:79:11: warning: unused variable 'voltage' [-Wunused-variable]
+   79 |  uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+      |           ^~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11208	     24	   1784	  13016	   32d8	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:42:20 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:83:11: warning: unused variable 'voltage' [-Wunused-variable]
+   83 |  uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+      |           ^~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11268	     24	   1784	  13076	   3314	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:43:07 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:84:11: warning: unused variable 'voltage' [-Wunused-variable]
+   84 |  uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+      |           ^~~~~~~
+At top level:
+../Core/Src/main.c:67:17: warning: 'avg_pot' defined but not used [-Wunused-variable]
+   67 | static uint32_t avg_pot = 0;
+      |                 ^~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11208	     20	   1780	  13008	   32d0	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:47:19 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:85:11: warning: unused variable 'voltage' [-Wunused-variable]
+   85 |  uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+      |           ^~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:144:58: warning: unused variable 'state' [-Wunused-variable]
+  144 |           static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                          ^~~~~
+At top level:
+../Core/Src/main.c:144:58: warning: 'state' defined but not used [-Wunused-variable]
+../Core/Src/main.c:68:17: warning: 'avg_pot' defined but not used [-Wunused-variable]
+   68 | static uint32_t avg_pot = 0;
+      |                 ^~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11208	     20	   1780	  13008	   32d0	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+16:56:05 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:86:11: warning: unused variable 'voltage' [-Wunused-variable]
+   86 |  uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+      |           ^~~~~~~
+At top level:
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+../Core/Src/main.c:68:17: warning: 'avg_pot' defined but not used [-Wunused-variable]
+   68 | static uint32_t avg_pot = 0;
+      |                 ^~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11208	     20	   1780	  13008	   32d0	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:00:00 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:83:26: warning: unused variable 'voltage' [-Wunused-variable]
+   83 |                 uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+      |                          ^~~~~~~
+../Core/Src/main.c:95:23: error: expected expression before ';' token
+   95 |      else channel = ++;
+      |                       ^
+At top level:
+../Core/Src/main.c:68:17: warning: 'avg_pot' defined but not used [-Wunused-variable]
+   68 | static uint32_t avg_pot = 0;
+      |                 ^~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:02:24 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:81:23: error: expected expression before ';' token
+   81 |      else channel = ++;
+      |                       ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:02:42 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  10584	     20	   1780	  12384	   3060	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:03:59 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  10632	     20	   1780	  12432	   3090	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:04:38 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  10632	     20	   1780	  12432	   3090	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:08:41 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:149:19: error: too few arguments to function 'sct_value'
+  149 |                   sct_value(voltage);
+      |                   ^~~~~~~~~
+In file included from ../Core/Src/main.c:24:
+../Core/Src/sct.h:13:6: note: declared here
+   13 | void sct_value(uint16_t value, uint8_t led);
+      |      ^~~~~~~~~
+At top level:
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:08:54 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11296	     20	   1780	  13096	   3328	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:10:46 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11264	     20	   1780	  13064	   3308	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:14:07 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11300	     20	   1780	  13100	   332c	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:17:32 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:80:26: warning: unused variable 'voltage' [-Wunused-variable]
+   80 |                 uint32_t voltage = 330 * (*VREFINT_CAL_ADDR) / raw_volt;
+      |                          ^~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:151:29: error: 'voltage' undeclared (first use in this function)
+  151 |                   sct_value(voltage,0);
+      |                             ^~~~~~~
+../Core/Src/main.c:151:29: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:18:18 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:148:29: error: 'voltage' undeclared (first use in this function)
+  148 |                   sct_value(voltage,0);
+      |                             ^~~~~~~
+../Core/Src/main.c:148:29: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:70:48: warning: 'state' defined but not used [-Wunused-variable]
+   70 | static enum { SHOW_POT, SHOW_VOLT, SHOW_TEMP } state = SHOW_POT;
+      |                                                ^~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:19:34 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11320	     20	   1788	  13128	   3348	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:20:59 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11328	     20	   1788	  13136	   3350	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:21:24 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11328	     20	   1788	  13136	   3350	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:27:57 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c:73:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   73 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11352	     20	   1788	  13160	   3368	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:28:30 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:73:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   73 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11360	     20	   1788	  13168	   3370	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:32:06 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:222:13: error: invalid storage class for function 'MX_ADC_Init'
+  222 | static void MX_ADC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:292:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  292 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:327:13: error: invalid storage class for function 'MX_GPIO_Init'
+  327 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:392:1: error: expected declaration or statement at end of input
+  392 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:57:13: warning: 'MX_GPIO_Init' used but never defined
+   57 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:59:13: warning: 'MX_ADC_Init' used but never defined
+   59 | static void MX_ADC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:383:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  383 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:327:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  327 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:292:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  292 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:222:13: warning: 'MX_ADC_Init' defined but not used [-Wunused-function]
+  222 | static void MX_ADC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:181:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  181 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:32:32 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:222:13: error: invalid storage class for function 'MX_ADC_Init'
+  222 | static void MX_ADC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:292:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  292 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:327:13: error: invalid storage class for function 'MX_GPIO_Init'
+  327 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:392:1: error: expected declaration or statement at end of input
+  392 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:57:13: warning: 'MX_GPIO_Init' used but never defined
+   57 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:59:13: warning: 'MX_ADC_Init' used but never defined
+   59 | static void MX_ADC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:383:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  383 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:327:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  327 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:292:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  292 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:222:13: warning: 'MX_ADC_Init' defined but not used [-Wunused-function]
+  222 | static void MX_ADC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:181:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  181 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:33:14 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:161:64: error: 'raw_tem' undeclared (first use in this function); did you mean 'raw_temp'?
+  161 |                                         int32_t temperature = (raw_tem - (int32_t) (*TEMP30_CAL_ADDR));
+      |                                                                ^~~~~~~
+      |                                                                raw_temp
+../Core/Src/main.c:161:64: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:221:13: error: invalid storage class for function 'MX_ADC_Init'
+  221 | static void MX_ADC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:291:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  291 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:326:13: error: invalid storage class for function 'MX_GPIO_Init'
+  326 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:391:1: error: expected declaration or statement at end of input
+  391 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:57:13: warning: 'MX_GPIO_Init' used but never defined
+   57 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:59:13: warning: 'MX_ADC_Init' used but never defined
+   59 | static void MX_ADC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:382:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  382 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:326:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  326 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:291:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  291 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:221:13: warning: 'MX_ADC_Init' defined but not used [-Wunused-function]
+  221 | static void MX_ADC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:180:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  180 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:33:57 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:220:13: error: invalid storage class for function 'MX_ADC_Init'
+  220 | static void MX_ADC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:290:13: error: invalid storage class for function 'MX_USART2_UART_Init'
+  290 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:325:13: error: invalid storage class for function 'MX_GPIO_Init'
+  325 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:390:1: error: expected declaration or statement at end of input
+  390 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:57:13: warning: 'MX_GPIO_Init' used but never defined
+   57 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:58:13: warning: 'MX_USART2_UART_Init' used but never defined
+   58 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:59:13: warning: 'MX_ADC_Init' used but never defined
+   59 | static void MX_ADC_Init(void);
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:381:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  381 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:325:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  325 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:290:13: warning: 'MX_USART2_UART_Init' defined but not used [-Wunused-function]
+  290 | static void MX_USART2_UART_Init(void)
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:220:13: warning: 'MX_ADC_Init' defined but not used [-Wunused-function]
+  220 | static void MX_ADC_Init(void)
+      |             ^~~~~~~~~~~
+../Core/Src/main.c:179:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  179 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:34:32 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11468	     20	   1796	  13284	   33e4	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:40:15 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11460	     20	   1796	  13276	   33dc	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:41:15 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11448	     20	   1796	  13264	   33d0	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:45:58 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11460	     20	   1796	  13276	   33dc	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:49:09 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c:73:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   73 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11452	     20	   1796	  13268	   33d4	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:49:52 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_ADC_ConvCpltCallback':
+../Core/Src/main.c:82:27: error: 'avg_pot' undeclared (first use in this function)
+   82 |                 raw_pot = avg_pot >> ADC_Q;
+      |                           ^~~~~~~
+../Core/Src/main.c:82:27: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:73:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   73 | static uint32_t off_time;
+      |                 ^~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+17:50:11 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:74:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   74 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11500	     20	   1796	  13316	   3404	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 
+17:52:17 **** Incremental Build of configuration Debug for project cviceni4 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:74:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   74 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "cviceni4.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni4\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni4.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni4.elf
+ 
+arm-none-eabi-size   cviceni4.elf 
+arm-none-eabi-objdump -h -S  cviceni4.elf  > "cviceni4.list"
+   text	   data	    bss	    dec	    hex	filename
+  11500	     20	   1796	  13316	   3404	cviceni4.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni4.list
+ 

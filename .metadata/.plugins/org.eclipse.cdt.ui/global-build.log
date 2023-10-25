@@ -2020,3 +2020,464 @@ Finished building: default.size.stdout
  
 Finished building: cviceni5.list
  
+16:01:21 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:21:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   20 | #include "main.h"
+  +++ |+#include <string.h>
+   21 | 
+../Core/Src/main.c:71:25: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   71 |                         printf("Komunikace OK\n");
+      |                         ^~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:71:25: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   71 |                         printf("Komunikace OK\n");
+      |                         ^~~~~~
+../Core/Src/main.c:71:25: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:78:54: error: expected ')' before '{' token
+   78 |                         else if (strcmp(token, "OFF"){
+      |                                 ~                    ^
+      |                                                      )
+../Core/Src/main.c:82:17: error: expected expression before '}' token
+   82 |                 }
+      |                 ^
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:89:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   89 |         printf("prijato: '%s'\n", cmd);
+      |         ^~~~~~
+../Core/Src/main.c:89:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:01:56 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:21:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   20 | #include "main.h"
+  +++ |+#include <string.h>
+   21 | 
+../Core/Src/main.c:71:25: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+   71 |                         printf("Komunikace OK\n");
+      |                         ^~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:71:25: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   71 |                         printf("Komunikace OK\n");
+      |                         ^~~~~~
+../Core/Src/main.c:71:25: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:81:25: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   81 |                         printf("OK\n");
+      |                         ^~~~~~
+../Core/Src/main.c:81:25: note: include '<stdio.h>' or provide a declaration of 'printf'
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:89:9: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+   89 |         printf("prijato: '%s'\n", cmd);
+      |         ^~~~~~
+../Core/Src/main.c:89:9: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  15116	    112	   2432	  17660	   44fc	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+16:02:49 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   24 | #include "stdio.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  15116	    112	   2432	  17660	   44fc	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+16:04:33 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   24 | #include "stdio.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:84:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   84 |                         token = strtok(NULL, " ");
+      |                               ^
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  15232	    112	   2432	  17776	   4570	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+16:06:25 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   24 | #include "stdio.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:84:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   84 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:94:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   94 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:96:40: error: incompatible type for argument 1 of 'printf'
+   96 |                                 printf(HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin));
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        GPIO_PinState
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'GPIO_PinState'
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+../Core/Src/main.c:99:40: error: incompatible type for argument 1 of 'printf'
+   99 |                                 printf(HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin));
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        GPIO_PinState
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'GPIO_PinState'
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:09:55 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   24 | #include "stdio.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:84:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   84 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:94:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   94 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:97:41: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+   97 |                                 scanf("%d", &state1);
+      |                                        ~^   ~~~~~~~
+      |                                         |   |
+      |                                         |   uint8_t * {aka unsigned char *}
+      |                                         int *
+      |                                        %hhd
+../Core/Src/main.c:98:40: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+   98 |                                 printf(state1);
+      |                                        ^~~~~~
+      |                                        |
+      |                                        uint8_t {aka unsigned char}
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'uint8_t' {aka 'unsigned char'}
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+../Core/Src/main.c:101:40: error: incompatible type for argument 1 of 'printf'
+  101 |                                 printf(HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin));
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        GPIO_PinState
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'GPIO_PinState'
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:10:21 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   24 | #include "stdio.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:84:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   84 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:94:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   94 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:96:47: error: incompatible types when initializing type 'int *' using type 'GPIO_PinState'
+   96 |                                 int* state1 = HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin);
+      |                                               ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:97:41: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int **' [-Wformat=]
+   97 |                                 scanf("%d", &state1);
+      |                                        ~^   ~~~~~~~
+      |                                         |   |
+      |                                         |   int **
+      |                                         int *
+../Core/Src/main.c:98:40: warning: passing argument 1 of 'printf' from incompatible pointer type [-Wincompatible-pointer-types]
+   98 |                                 printf(state1);
+      |                                        ^~~~~~
+      |                                        |
+      |                                        int *
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'int *'
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+../Core/Src/main.c:101:40: error: incompatible type for argument 1 of 'printf'
+  101 |                                 printf(HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin));
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                        |
+      |                                        GPIO_PinState
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'GPIO_PinState'
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:11:22 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   24 | #include "stdio.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:84:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   84 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:94:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   94 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:97:41: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+   97 |                                 scanf("%d", &state1);
+      |                                        ~^   ~~~~~~~
+      |                                         |   |
+      |                                         |   uint8_t * {aka unsigned char *}
+      |                                         int *
+      |                                        %hhd
+../Core/Src/main.c:98:40: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+   98 |                                 printf(state1);
+      |                                        ^~~~~~
+      |                                        |
+      |                                        uint8_t {aka unsigned char}
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'uint8_t' {aka 'unsigned char'}
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+../Core/Src/main.c:102:41: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+  102 |                                 scanf("%d", &state2);
+      |                                        ~^   ~~~~~~~
+      |                                         |   |
+      |                                         |   uint8_t * {aka unsigned char *}
+      |                                         int *
+      |                                        %hhd
+../Core/Src/main.c:103:40: warning: passing argument 1 of 'printf' makes pointer from integer without a cast [-Wint-conversion]
+  103 |                                 printf(state2);
+      |                                        ^~~~~~
+      |                                        |
+      |                                        uint8_t {aka unsigned char}
+In file included from ../Core/Src/main.c:24:
+C:\appz\ST\STM32CubeIDE_1.10.1\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/stdio.h:210:17: note: expected 'const char * restrict' but argument is of type 'uint8_t' {aka 'unsigned char'}
+  210 | int     printf (const char *__restrict, ...)
+      |                 ^
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  18844	    112	   2432	  21388	   538c	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+16:15:42 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   24 | #include "stdio.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:84:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   84 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:94:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   94 |                         token = strtok(NULL, " ");
+      |                               ^
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  15572	    112	   2432	  18116	   46c4	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+16:16:48 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:69:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   69 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:69:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   69 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:70:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   70 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:25:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   24 | #include "stdio.h"
+  +++ |+#include <string.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:74:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   74 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:84:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   84 |                         token = strtok(NULL, " ");
+      |                               ^
+../Core/Src/main.c:94:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   94 |                         token = strtok(NULL, " ");
+      |                               ^
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  15540	    112	   2432	  18084	   46a4	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 

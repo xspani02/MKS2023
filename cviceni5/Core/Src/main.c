@@ -18,11 +18,10 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "stdio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -74,10 +73,40 @@ static void uart_byte_available(uint8_t c) {
 		else if (strcmp(token, "LED1") == 0) {
 			token = strtok(NULL, " ");
 			if (strcmp(token, "ON") == 0){
-
+				HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
 			}
-			else if (strcmp(token, "OFF"){
-
+			else if (strcmp(token, "OFF") == 0){
+				HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
+			}
+			printf("OK\n");
+		}
+		else if (strcmp(token, "LED2") == 0) {
+			token = strtok(NULL, " ");
+			if (strcmp(token, "ON") == 0){
+				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
+			}
+			else if (strcmp(token, "OFF") == 0){
+				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
+			}
+			printf("OK\n");
+		}
+		else if (strcmp(token, "STATUS") == 0) {
+			token = strtok(NULL, " ");
+			if (strcmp(token, "LED1") == 0){
+				if (HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin) == 0){
+					printf("LED1 is OFF\n");
+				}
+				else if (HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin) == 1){
+					printf("LED1 is ON\n");
+				}
+			}
+			else if (strcmp(token, "LED2") == 0){
+				if (HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin) == 0){
+					printf("LED2 is OFF\n");
+				}
+				else if (HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin) == 1){
+					printf("LED2 is ON\n");
+				}
 			}
 			printf("OK\n");
 		}
@@ -259,9 +288,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
+  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED1_Pin|LD2_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : B1_Pin */
   GPIO_InitStruct.Pin = B1_Pin;
@@ -269,12 +302,19 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(B1_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : LD2_Pin */
-  GPIO_InitStruct.Pin = LD2_Pin;
+  /*Configure GPIO pins : LED1_Pin LD2_Pin */
+  GPIO_InitStruct.Pin = LED1_Pin|LD2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : LED2_Pin */
+  GPIO_InitStruct.Pin = LED2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(LED2_GPIO_Port, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
 /* USER CODE END MX_GPIO_Init_2 */

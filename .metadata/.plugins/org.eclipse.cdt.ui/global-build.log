@@ -1633,3 +1633,390 @@ Finished building: default.size.stdout
  
 Finished building: cviceni5.list
  
+15:35:38 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char)'
+   73 | void uart_process_command(char cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:74:28: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   74 |         printf("prijato: '%s'\n", cmd);
+      |                           ~^      ~~~
+      |                            |      |
+      |                            char * int
+      |                           %d
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  13972	    112	   2432	  16516	   4084	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+15:36:20 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(int32_t)' {aka 'void(long int)'}
+   73 | void uart_process_command(int32_t cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(int32_t)' {aka 'void(long int)'}
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:74:28: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]
+   74 |         printf("prijato: '%s'\n", cmd);
+      |                           ~^      ~~~
+      |                            |      |
+      |                            char * int32_t {aka long int}
+      |                           %ld
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  13964	    112	   2432	  16508	   407c	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+15:37:32 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char *)'
+   73 | void uart_process_command(char* cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char *)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  13964	    112	   2432	  16508	   407c	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+15:40:52 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char *)'
+   73 | void uart_process_command(char* cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char *)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  140 |         token = strtok(cmd, " ");
+      |                 ^~~~~~
+../Core/Src/main.c:140:24: error: 'cmd' undeclared (first use in this function)
+  140 |         token = strtok(cmd, " ");
+      |                        ^~~
+../Core/Src/main.c:140:24: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:141:13: warning: implicit declaration of function 'strcasecmp' [-Wimplicit-function-declaration]
+  141 |         if (strcasecmp(token, "HELLO") == 0) {
+      |             ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:43:56 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char *)'
+   73 | void uart_process_command(char* cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char *)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  140 |         token = strtok(b, " ");
+      |                 ^~~~~~
+../Core/Src/main.c:140:24: error: 'b' undeclared (first use in this function)
+  140 |         token = strtok(b, " ");
+      |                        ^
+../Core/Src/main.c:140:24: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:141:13: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  141 |         if (strcmp(token, "HELLO") == 0) {
+      |             ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:44:21 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char *)'
+   73 | void uart_process_command(char* cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char *)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  140 |         token = strtok(uart_byte_available(b), " ");
+      |                 ^~~~~~
+../Core/Src/main.c:140:44: error: 'b' undeclared (first use in this function)
+  140 |         token = strtok(uart_byte_available(b), " ");
+      |                                            ^
+../Core/Src/main.c:140:44: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:141:13: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  141 |         if (strcmp(token, "HELLO") == 0) {
+      |             ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:44:51 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char *)'
+   73 | void uart_process_command(char* cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char *)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:140:17: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  140 |         token = strtok(uart_rx_buf[uart_rx_read_ptr], " ");
+      |                 ^~~~~~
+../Core/Src/main.c:140:15: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  140 |         token = strtok(uart_rx_buf[uart_rx_read_ptr], " ");
+      |               ^
+../Core/Src/main.c:141:13: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  141 |         if (strcmp(token, "HELLO") == 0) {
+      |             ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  14980	    112	   2432	  17524	   4474	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+15:48:46 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char *)'
+   73 | void uart_process_command(char* cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char *)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:20: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  138 |            token = strtok(cmd, " ");
+      |                    ^~~~~~
+../Core/Src/main.c:138:27: error: 'cmd' undeclared (first use in this function)
+  138 |            token = strtok(cmd, " ");
+      |                           ^~~
+../Core/Src/main.c:138:27: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:139:16: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  139 |            if (strcmp(token, "HELLO") == 0) {
+      |                ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
+../Core/Src/main.c:134:20: warning: unused variable 'b' [-Wunused-variable]
+  134 |            uint8_t b = uart_rx_buf[uart_rx_read_ptr];
+      |                    ^
+At top level:
+../Core/Src/main.c:61:13: warning: 'uart_byte_available' defined but not used [-Wunused-function]
+   61 | static void uart_byte_available(uint8_t c) {
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:48:57 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char *)'
+   73 | void uart_process_command(char* cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char *)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:138:20: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  138 |            token = strtok(b, " ");
+      |                    ^~~~~~
+../Core/Src/main.c:138:18: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  138 |            token = strtok(b, " ");
+      |                  ^
+../Core/Src/main.c:139:16: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  139 |            if (strcmp(token, "HELLO") == 0) {
+      |                ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
+At top level:
+../Core/Src/main.c:61:13: warning: 'uart_byte_available' defined but not used [-Wunused-function]
+   61 | static void uart_byte_available(uint8_t c) {
+      |             ^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  14772	    112	   2176	  17060	   42a4	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+15:52:06 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(char *)'
+   73 | void uart_process_command(char* cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(char *)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:136:36: error: expected expression before '/' token
+  136 |            uart_byte_available(b);*/ // process every received byte with the RX state machine
+      |                                    ^
+../Core/Src/main.c:138:12: error: 'token' undeclared (first use in this function)
+  138 |            token = strtok(cmd, " ");
+      |            ^~~~~
+../Core/Src/main.c:138:12: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:138:20: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+  138 |            token = strtok(cmd, " ");
+      |                    ^~~~~~
+../Core/Src/main.c:138:27: error: 'cmd' undeclared (first use in this function)
+  138 |            token = strtok(cmd, " ");
+      |                           ^~~
+../Core/Src/main.c:139:16: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+  139 |            if (strcmp(token, "HELLO") == 0) {
+      |                ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:53:45 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:70:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   70 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:70:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   70 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:71:21: warning: implicit declaration of function 'strcasecmp' [-Wimplicit-function-declaration]
+   71 |                 if (strcasecmp(token, "HELLO") == 0) {
+      |                     ^~~~~~~~~~
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  15188	    112	   2432	  17732	   4544	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+15:54:35 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:70:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   70 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:70:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   70 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:71:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   71 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  14896	    112	   2432	  17440	   4420	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 

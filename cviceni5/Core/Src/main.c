@@ -65,12 +65,28 @@ static void uart_byte_available(uint8_t c) {
 		data[cnt++] = c;
 	if ((c == '\n' || c == '\r') && cnt > 0) {
 		data[cnt] = '\0';
-		uart_process_command(data);
+		/*uart_process_command(data);*/
+		char *token;
+		token = strtok(data, " ");
+		if (strcmp(token, "HELLO") == 0) {
+			printf("Komunikace OK\n");
+		}
+		else if (strcmp(token, "LED1") == 0) {
+			token = strtok(NULL, " ");
+			if (strcmp(token, "ON") == 0){
+
+			}
+			else if (strcmp(token, "OFF"){
+
+			}
+			printf("OK\n");
+		}
+
 		cnt = 0;
 	}
 }
 
-void uart_process_command(int cmd) {
+void uart_process_command(char* cmd) {
 	printf("prijato: '%s'\n", cmd);
 }
 
@@ -133,7 +149,7 @@ int main(void)
 	while (uart_rx_read_ptr != uart_rx_write_ptr) {
 	   uint8_t b = uart_rx_buf[uart_rx_read_ptr];
 	   if (++uart_rx_read_ptr >= RX_BUFFER_LEN) uart_rx_read_ptr = 0; // increase read pointer
-	   uart_byte_available(b); // process every received byte with the RX state machine
+	   uart_byte_available(b);// process every received byte with the RX state machine
 	}
   }
   /* USER CODE END 3 */

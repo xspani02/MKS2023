@@ -1,35 +1,31 @@
-15:32:57 **** Incremental Build of configuration Debug for project cviceni5 ****
+15:54:35 **** Incremental Build of configuration Debug for project cviceni5 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'uart_byte_available':
-../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
-   68 |                 uart_process_command(data);
-      |                 ^~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(int)'
-   73 | void uart_process_command(int cmd) {
-      |      ^~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(int)'
-   68 |                 uart_process_command(data);
-      |                 ^~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c: In function 'uart_process_command':
-../Core/Src/main.c:74:28: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
-   74 |         printf("prijato: '%s'\n", cmd);
-      |                           ~^      ~~~
-      |                            |      |
-      |                            char * int
-      |                           %d
+../Core/Src/main.c:70:25: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
+   70 |                 token = strtok(data, " ");
+      |                         ^~~~~~
+../Core/Src/main.c:70:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+   70 |                 token = strtok(data, " ");
+      |                       ^
+../Core/Src/main.c:71:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
+   71 |                 if (strcmp(token, "HELLO") == 0) {
+      |                     ^~~~~~
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strcmp'
+   21 | #include "stdio.h"
+  +++ |+#include <string.h>
+   22 | 
 arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: cviceni5.elf
  
 arm-none-eabi-size   cviceni5.elf 
 arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
    text	   data	    bss	    dec	    hex	filename
-  13964	    112	   2432	  16508	   407c	cviceni5.elf
+  14896	    112	   2432	  17440	   4420	cviceni5.elf
 Finished building: default.size.stdout
  
 Finished building: cviceni5.list
  
 
-15:32:58 Build Finished. 0 errors, 3 warnings. (took 883ms)
+15:54:36 Build Finished. 0 errors, 3 warnings. (took 992ms)
 

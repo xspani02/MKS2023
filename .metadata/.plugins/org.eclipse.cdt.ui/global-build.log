@@ -1567,3 +1567,69 @@ arm-none-eabi-size   cviceni5.elf
    7704	     20	   1700	   9424	   24d0	cviceni5.elf
 Finished building: default.size.stdout
  
+15:28:39 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_hal_msp.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_hal_msp.d" -MT"Core/Src/stm32f0xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(uint32_t)' {aka 'void(long unsigned int)'}
+   73 | void uart_process_command(uint32_t cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(uint32_t)' {aka 'void(long unsigned int)'}
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:74:28: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   74 |         printf("prijato: '%s'\n", cmd);
+      |                           ~^      ~~~
+      |                            |      |
+      |                            char * uint32_t {aka long unsigned int}
+      |                           %ld
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  13964	    112	   2432	  16508	   407c	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 
+15:32:57 **** Incremental Build of configuration Debug for project cviceni5 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'uart_byte_available':
+../Core/Src/main.c:68:17: warning: implicit declaration of function 'uart_process_command' [-Wimplicit-function-declaration]
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:73:6: warning: conflicting types for 'uart_process_command'; have 'void(int)'
+   73 | void uart_process_command(int cmd) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:68:17: note: previous implicit declaration of 'uart_process_command' with type 'void(int)'
+   68 |                 uart_process_command(data);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'uart_process_command':
+../Core/Src/main.c:74:28: warning: format '%s' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   74 |         printf("prijato: '%s'\n", cmd);
+      |                           ~^      ~~~
+      |                            |      |
+      |                            char * int
+      |                           %d
+arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: cviceni5.elf
+ 
+arm-none-eabi-size   cviceni5.elf 
+arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
+   text	   data	    bss	    dec	    hex	filename
+  13964	    112	   2432	  16508	   407c	cviceni5.elf
+Finished building: default.size.stdout
+ 
+Finished building: cviceni5.list
+ 

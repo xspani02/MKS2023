@@ -1,74 +1,17 @@
-17:28:24 **** Incremental Build of configuration Debug for project cviceni5 ****
+17:47:37 **** Incremental Build of configuration Debug for project cviceni5 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'uart_byte_available':
-../Core/Src/main.c:74:25: warning: implicit declaration of function 'strtok'; did you mean 'strtol'? [-Wimplicit-function-declaration]
-   74 |                 token = strtok(data, " ");
-      |                         ^~~~~~
-      |                         strtol
-../Core/Src/main.c:74:23: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   74 |                 token = strtok(data, " ");
-      |                       ^
-../Core/Src/main.c:75:21: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
-   75 |                 if (strcmp(token, "HELLO") == 0) {
-      |                     ^~~~~~
-../Core/Src/main.c:26:1: note: include '<string.h>' or provide a declaration of 'strcmp'
-   25 | #include <stdlib.h>
-  +++ |+#include <string.h>
-   26 | /* USER CODE END Includes */
-../Core/Src/main.c:79:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   79 |                         token = strtok(NULL, " ");
-      |                               ^
-../Core/Src/main.c:89:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   89 |                         token = strtok(NULL, " ");
-      |                               ^
-../Core/Src/main.c:99:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   99 |                         token = strtok(NULL, " ");
-      |                               ^
-../Core/Src/main.c:119:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  119 |                         token = strtok(NULL, " ");
-      |                               ^
-../Core/Src/main.c:122:93: warning: passing argument 5 of 'HAL_I2C_Mem_Read' from incompatible pointer type [-Wincompatible-pointer-types]
-  122 |                         HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr , I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
-      |                                                                                             ^~~~~~
-      |                                                                                             |
-      |                                                                                             uint16_t * {aka short unsigned int *}
-In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
-                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:633:66: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  633 |                                    uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                         ~~~~~~~~~^~~~~
-../Core/Src/main.c:127:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  127 |                         token = strtok(NULL, " ");
-      |                               ^
-../Core/Src/main.c:129:31: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  129 |                         token = strtok(NULL, " ");
-      |                               ^
-../Core/Src/main.c:131:93: warning: passing argument 5 of 'HAL_I2C_Mem_Write' from incompatible pointer type [-Wincompatible-pointer-types]
-  131 |                         HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
-      |                                                                                             ^~~~~~
-      |                                                                                             |
-      |                                                                                             uint16_t * {aka short unsigned int *}
-In file included from ../Core/Inc/stm32f0xx_hal_conf.h:241,
-                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h:631:67: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
-  631 |                                     uint16_t MemAddSize, uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                          ~~~~~~~~~^~~~~
 arm-none-eabi-gcc -o "cviceni5.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni5\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni5.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: cviceni5.elf
  
 arm-none-eabi-size   cviceni5.elf 
 arm-none-eabi-objdump -h -S  cviceni5.elf  > "cviceni5.list"
    text	   data	    bss	    dec	    hex	filename
-  20776	    112	   2512	  23400	   5b68	cviceni5.elf
+  21068	    112	   2512	  23692	   5c8c	cviceni5.elf
 Finished building: default.size.stdout
  
 Finished building: cviceni5.list
  
 
-17:28:25 Build Finished. 0 errors, 11 warnings. (took 920ms)
+17:47:38 Build Finished. 0 errors, 0 warnings. (took 925ms)
 

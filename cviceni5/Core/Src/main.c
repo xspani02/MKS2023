@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -74,72 +75,71 @@ static void uart_byte_available(uint8_t c) {
 		token = strtok(data, " ");
 		if (strcmp(token, "HELLO") == 0) {
 			printf("Komunikace OK\n");
-		}
-		else if (strcmp(token, "LED1") == 0) {
+		} else if (strcmp(token, "LED1") == 0) {
 			token = strtok(NULL, " ");
-			if (strcmp(token, "ON") == 0){
+			if (strcmp(token, "ON") == 0) {
 				HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);
-			}
-			else if (strcmp(token, "OFF") == 0){
+			} else if (strcmp(token, "OFF") == 0) {
 				HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);
 			}
 			printf("OK\n");
-		}
-		else if (strcmp(token, "LED2") == 0) {
+		} else if (strcmp(token, "LED2") == 0) {
 			token = strtok(NULL, " ");
-			if (strcmp(token, "ON") == 0){
+			if (strcmp(token, "ON") == 0) {
 				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 1);
-			}
-			else if (strcmp(token, "OFF") == 0){
+			} else if (strcmp(token, "OFF") == 0) {
 				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, 0);
 			}
 			printf("OK\n");
-		}
-		else if (strcmp(token, "STATUS") == 0) {
+		} else if (strcmp(token, "STATUS") == 0) {
 			token = strtok(NULL, " ");
-			if (strcmp(token, "LED1") == 0){
-				if (HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin) == 0){
+			if (strcmp(token, "LED1") == 0) {
+				if (HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin) == 0) {
 					printf("LED1 is OFF\n");
-				}
-				else if (HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin) == 1){
+				} else if (HAL_GPIO_ReadPin(LED1_GPIO_Port, LED1_Pin) == 1) {
 					printf("LED1 is ON\n");
 				}
-			}
-			else if (strcmp(token, "LED2") == 0){
-				if (HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin) == 0){
+			} else if (strcmp(token, "LED2") == 0) {
+				if (HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin) == 0) {
 					printf("LED2 is OFF\n");
-				}
-				else if (HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin) == 1){
+				} else if (HAL_GPIO_ReadPin(LED2_GPIO_Port, LED2_Pin) == 1) {
 					printf("LED2 is ON\n");
 				}
 			}
 			printf("OK\n");
-		}
-		else if (strcmp(token, "read") == 0) {
+		} else if (strcmp(token, "read") == 0) {
 			token = strtok(NULL, " ");
 			uint16_t addr = atoi(token);
-			uint16_t value;
-			HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr , I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
-			while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000) == HAL_TIMEOUT) {}
+			uint8_t value;
+			HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT,
+					&value, 1, 1000);
+			while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000)
+					== HAL_TIMEOUT) {
+			}
 			printf("Adresa 0x%X = 0x%X\n", addr, value);
-		}
-		else if (strcmp(token, "write") == 0) {
+		} else if (strcmp(token, "write") == 0) {
 			token = strtok(NULL, " ");
 			uint16_t addr = atoi(token);
 			token = strtok(NULL, " ");
-			uint16_t value = atoi(token);
-			HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
-			while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000) == HAL_TIMEOUT) {}
+			uint8_t value = atoi(token);
+			HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT,
+					&value, 1, 1000);
+			while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000)
+					== HAL_TIMEOUT) {
+			}
 			printf("OK\n");
-		}
-		else if (strcmp(token, "dump") == 0) {
-			token = strtok(NULL, " ");
-			uint16_t addr = atoi(token);
-			token = strtok(NULL, " ");
-			uint16_t value = atoi(token);
-			HAL_I2C_Mem_Write(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000);
-			while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000) == HAL_TIMEOUT) {}
-			printf("OK\n");
+		} else if (strcmp(token, "dump") == 0) {
+			for (uint8_t i = 0; i < 16; i++) {
+				uint8_t value;
+				HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, i, I2C_MEMADD_SIZE_16BIT,
+						&value, 1, 1000);
+				while (HAL_I2C_IsDeviceReady(&hi2c1, EEPROM_ADDR, 300, 1000)
+						== HAL_TIMEOUT) {
+				}
+				printf("0x%X ", value);
+			}
+			printf("\n");
+
 		}
 
 		cnt = 0;

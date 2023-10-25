@@ -1,0 +1,38 @@
+/*
+ * sct.c
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: xspani02
+ */
+#include "main.h"
+#include "sct.h"
+
+void sct_led(uint32_t value)
+{
+
+
+	/*for 0 ... 1
+		sdi(value&1)
+		value >>=1
+	 	scl(1)
+		SCL(0)
+	nla(1)
+	nla(0)
+	*/
+	for (int i = 0; i < 32; ++i)
+	{
+		sdi(value&1);
+		value >>=1;
+		HAL_GPIO_WritePin(SCT_CLK_GPIO_Port, SCT_CLK_Pin, 1);
+		HAL_GPIO_WritePin(SCT_CLK_GPIO_Port, SCT_CLK_Pin, 0);
+	}
+
+	HAL_GPIO_WritePin(SCT_NLA_GPIO_Port, SCT_NLA_Pin, 1);
+	HAL_GPIO_WritePin(SCT_NLA_GPIO_Port, SCT_NLA_Pin, 0);
+
+}
+
+void sct_init(void)
+{
+	sct_led(0);
+}

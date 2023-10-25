@@ -1,0 +1,20 @@
+15:12:27 **** Build of configuration Debug for project cviceni3 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
+../Core/Src/sct.c:29:6: error: conflicting types for 'sct_value'; have 'void(uint16_t,  uint8_t)' {aka 'void(short unsigned int,  unsigned char)'}
+   29 | void sct_value(uint16_t value, uint8_t led) {
+      |      ^~~~~~~~~
+In file included from ../Core/Src/sct.c:8:
+../Core/Src/sct.h:13:6: note: previous declaration of 'sct_value' with type 'void(uint16_t)' {aka 'void(short unsigned int)'}
+   13 | void sct_value(uint16_t value);
+      |      ^~~~~~~~~
+../Core/Src/sct.c: In function 'sct_value':
+../Core/Src/sct.c:71:25: warning: excess elements in array initializer
+   71 |                         {
+      |                         ^
+../Core/Src/sct.c:71:25: note: (near initialization for 'reg_values')
+make: *** [Core/Src/subdir.mk:37: Core/Src/sct.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+15:12:28 Build Failed. 2 errors, 1 warnings. (took 679ms)
+

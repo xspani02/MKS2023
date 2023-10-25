@@ -60,8 +60,8 @@ all: main-build
 main-build: cviceni2.elf secondary-outputs
 
 # Tool invocations
-cviceni2.elf cviceni2.map: $(OBJS) $(USER_OBJS) C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\spanik_MKS\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+cviceni2.elf cviceni2.map: $(OBJS) $(USER_OBJS) C:\Users\xspani02\Documents\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "cviceni2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\cviceni2\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

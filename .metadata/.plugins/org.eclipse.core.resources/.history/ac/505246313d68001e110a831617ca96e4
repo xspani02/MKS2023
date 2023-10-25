@@ -1,0 +1,29 @@
+/*
+ * sct.c
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: xspani02
+ */
+#include "main.h"
+#include "sct.h"
+
+void sct_led(uint32_t value)
+{
+
+
+	/*for 0 ... 1
+		sdi(value&1)
+		value >>=1
+	 	scl(1)
+		SCL(0)
+	nla(1)
+	nla(0)
+	*/]
+
+
+}
+
+void sct_init(void)
+{
+	sct_led(0);
+}

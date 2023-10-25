@@ -1,0 +1,21 @@
+/*
+ * sct.h
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: xspani02
+ */
+
+#ifndef SRC_SCT_H_
+#define SRC_SCT_H_
+
+#define SCT_CLK_Pin GPIO_PIN_3
+#define SCT_CLK_GPIO_Port GPIOB
+#define SCT_SDI_Pin GPIO_PIN_4
+#define SCT_SDI_GPIO_Port GPIOB
+#define SCT_NLA_Pin GPIO_PIN_5
+#define SCT_NLA_GPIO_Port GPIOB
+#define SCT_NOE_Pin GPIO_PIN_10
+#define SCT_NOE_GPIO_Port GPIOB
+
+
+#endif /* SRC_SCT_H_ */

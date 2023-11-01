@@ -82,8 +82,8 @@ void sct_value(uint16_t value, uint8_t led) {
 			}
 	};
 
-	uint32_t reg = reg_values[0][value / 1000 % 10]
-			| reg_values[1][value / 100 % 10] | reg_values[2][value / 10 % 10] | reg_values[3][led];
+	uint32_t reg = reg_values[0][value / 100 % 10]
+			| reg_values[1][value / 10 % 10] | reg_values[2][value / 1 % 10] | reg_values[3][led];
 	sct_led(reg);
 
 }

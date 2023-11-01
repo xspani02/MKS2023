@@ -1,18 +1,17 @@
-15:27:42 **** Incremental Build of configuration Debug for project cviceni6 ****
+17:56:35 **** Incremental Build of configuration Debug for project cviceni6 ****
 make -j4 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/sct.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sct.d" -MT"Core/Src/sct.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sct.o"
 arm-none-eabi-gcc -o "cviceni6.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\TEMP\Documents\MKS2023\cviceni6\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cviceni6.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: cviceni6.elf
  
 arm-none-eabi-size   cviceni6.elf 
 arm-none-eabi-objdump -h -S  cviceni6.elf  > "cviceni6.list"
    text	   data	    bss	    dec	    hex	filename
-   8828	     20	   1700	  10548	   2934	cviceni6.elf
+  14392	     24	   1768	  16184	   3f38	cviceni6.elf
 Finished building: default.size.stdout
  
 Finished building: cviceni6.list
  
 
-15:27:43 Build Finished. 0 errors, 0 warnings. (took 944ms)
+17:56:35 Build Finished. 0 errors, 0 warnings. (took 872ms)
 

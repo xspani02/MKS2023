@@ -1,0 +1,805 @@
+!SESSION 2023-11-15 15:14:15.463 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2023-11-15 15:15:19.652
+!MESSAGE Recreating part support. No part support available.
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-11-15 15:15:22.949
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'V:\'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.nxp.mcuxpresso.core.datamodels 1 0 2023-11-15 15:15:24.277
+!MESSAGE The device 'LPC55S69' (version='1.0.0') from SDK 'SDK_2.x_LPCXpresso55S69' (version='2.6.0', build='Stage 602 2019-06-12') will be installed.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-15 15:19:58.546
+!MESSAGE Indexed 'lpcxpresso55s69_led_blinky' (0 sources, 0 headers) in 0.002 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.log 1 0 2023-11-15 15:26:58.682
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-11-15 15:26:59.201
+!MESSAGE RedlinkServer telnet session connected on port 3025->53660 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-11-15 15:30:08.285
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.utils 1 0 2023-11-15 15:30:31.299
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 15:30:31.917
+!MESSAGE Telnet session connected on port 2333->53821 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 15:37:09.649
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 15:37:10.548
+!MESSAGE Telnet session connected on port 2333->53946 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 15:45:24.146
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 15:45:25.072
+!MESSAGE Telnet session connected on port 2333->54083 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-11-15 15:48:10.815
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIMemory$4@4db1119b): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-data-evaluate-expression &(1000U)
+Error message from debugger back end:
+Attempt to take address of value not located in memory. java.lang.Exception: Attempt to take address of value not located in memory.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-11-15 15:48:10.815
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(1000U)
+Error message from debugger back end:
+Attempt to take address of value not located in memory.
+!STACK 0
+java.lang.Exception: Attempt to take address of value not located in memory.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1013)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:842)
+
+!ENTRY com.crt.utils 1 0 2023-11-15 15:48:23.345
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 15:48:24.229
+!MESSAGE Telnet session connected on port 2333->54157 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-11-15 15:53:23.916
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.mi.service.MIMemory$4@2af85ccf): Status ERROR: org.eclipse.cdt.dsf.gdb code=10004 Failed to execute MI command:
+-data-evaluate-expression &(port0_pin10_config)
+Error message from debugger back end:
+No symbol "port0_pin10_config" in current context. java.lang.Exception: No symbol "port0_pin10_config" in current context.' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 10004 2023-11-15 15:53:23.916
+!MESSAGE Failed to execute MI command:
+-data-evaluate-expression &(port0_pin10_config)
+Error message from debugger back end:
+No symbol "port0_pin10_config" in current context.
+!STACK 0
+java.lang.Exception: No symbol "port0_pin10_config" in current context.
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.processMIOutput(AbstractMIControl.java:1013)
+	at org.eclipse.cdt.dsf.mi.service.command.AbstractMIControl$RxThread.run(AbstractMIControl.java:842)
+
+!ENTRY com.crt.utils 1 0 2023-11-15 15:53:38.155
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 15:53:39.045
+!MESSAGE Telnet session connected on port 2333->54253 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 15:55:05.509
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 15:55:06.397
+!MESSAGE Telnet session connected on port 2333->54288 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 15:55:44.756
+!MESSAGE Connected to 127.0.0.1 on port 2332.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 15:55:45.644
+!MESSAGE Telnet session connected on port 2333->54313 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-15 16:03:06.629
+!MESSAGE Indexed 'lpcxpresso55s69_hello_world' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.log 1 0 2023-11-15 16:03:51.530
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-11-15 16:03:52.043
+!MESSAGE RedlinkServer telnet session connected on port 3025->54478 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-11-15 16:03:54.150
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:04:04.142
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:04:04.757
+!MESSAGE Telnet session connected on port 2335->54495 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 4 2023-11-15 16:04:20.623
+!MESSAGE NullPointerException while trying to calculated source lookup path. This can be ignored if it occurs while terminating a debug session. See Bug 500988.
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:102)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.collectSubstitutionsPaths(GdbSourceLookupDirector.java:146)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupDirector.getSubstitutionsPaths(GdbSourceLookupDirector.java:72)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.getSubstitutionsPaths(GDBSourceLookup.java:124)
+	at org.eclipse.cdt.dsf.gdb.service.GDBSourceLookup.sourceContainersChanged(GDBSourceLookup.java:139)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant.sourceContainersChangedOnDispatchThread(GdbSourceLookupParticipant.java:120)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbSourceLookupParticipant$1.run(GdbSourceLookupParticipant.java:85)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:05:19.866
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:05:20.536
+!MESSAGE Telnet session connected on port 2335->54533 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 16:05:55.673
+!MESSAGE Target not available.
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:06:11.167
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:06:11.821
+!MESSAGE Telnet session connected on port 2335->54557 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:07:25.921
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:07:26.587
+!MESSAGE Telnet session connected on port 2335->54595 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:08:09.807
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:08:10.491
+!MESSAGE Telnet session connected on port 2335->54628 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:09:41.049
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:09:41.928
+!MESSAGE Telnet session connected on port 2335->54672 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 16:09:57.249
+!MESSAGE Target not available.
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:11:05.959
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 16:11:06.449
+!MESSAGE Target not available.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:11:06.828
+!MESSAGE Telnet session connected on port 2335->54709 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 16:12:14.071
+!MESSAGE Target not available.
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 16:12:14.080
+!MESSAGE Target not available.
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:13:05.342
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:13:06.197
+!MESSAGE Telnet session connected on port 2335->54770 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:13:47.530
+!MESSAGE Connected to 127.0.0.1 on port 2334.
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 16:13:47.923
+!MESSAGE Target not available.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:13:48.404
+!MESSAGE Telnet session connected on port 2335->54795 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-15 16:14:15.248
+!MESSAGE Indexed 'lpcxpresso55s69_hello_world' (0 sources, 0 headers) in 0.002 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY com.crt.log 1 0 2023-11-15 16:14:26.734
+!MESSAGE Trying to connect to redlink server on port 3025.
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 1 0 2023-11-15 16:14:27.237
+!MESSAGE RedlinkServer telnet session connected on port 3025->54804 @ 127.0.0.1
+
+!ENTRY com.nxp.mcuxpresso.core.debug.support.linkserver 4 0 2023-11-15 16:14:29.172
+!MESSAGE Unable to parse ProbeList output to get probe ref count: []
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:14:38.633
+!MESSAGE Connected to 127.0.0.1 on port 2337.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:14:39.274
+!MESSAGE Telnet session connected on port 2338->54822 @ 127.0.0.1
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:15:01.005
+!MESSAGE Connected to 127.0.0.1 on port 2337.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:15:01.878
+!MESSAGE Telnet session connected on port 2338->54845 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 16:15:10.610
+!MESSAGE Target not available.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-11-15 16:23:03.214
+!MESSAGE Indexed 'lpcxpresso55s69_hello_world' (32 sources, 57 headers) in 1.27 sec: 11,197 declarations; 30,859 references; 2 unresolved inclusions; 60 syntax errors; 44 unresolved names (0.1%)
+
+!ENTRY com.crt.utils 1 0 2023-11-15 16:23:22.344
+!MESSAGE Connected to 127.0.0.1 on port 2337.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 16:23:23.208
+!MESSAGE Telnet session connected on port 2338->54994 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 16:23:36.222
+!MESSAGE Target not available.
+
+!ENTRY com.nxp.swtools.provider.processors 4 0 2023-11-15 16:26:38.314
+!MESSAGE Copying data from web - disk error
+!STACK 0
+java.nio.file.AccessDeniedException: C:\ProgramData\NXP\mcu_data_v12\components\ksdk2_0\cadc_reg_3aa3a1e7f4a7b23ac90f68072daac258\cadc_reg.component
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.copy(Unknown Source)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.unzipStream(CopyTask2.java:432)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.run(CopyTask2.java:371)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadDataForSdk(KExProcessorsProvider.java:1437)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadOrUpdateComponentCollection(KExProcessorsProvider.java:1142)
+	at com.nxp.swtools.utils.processors.ProcessorDataUpdateUI.downloadOrUpdateComponents(ProcessorDataUpdateUI.java:415)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.importToolchainProject(ImportToolchainProjectFactory.java:351)
+	at com.nxp.swtools.eclipse.handlers.OpenMexForProject.importToolchainConfigurationForProject(OpenMexForProject.java:129)
+	at com.nxp.swtools.eclipse.handlers.OpenMexForProject.lambda$1(OpenMexForProject.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY com.nxp.swtools.provider.processors 4 0 2023-11-15 16:26:39.104
+!MESSAGE Copying data from web - disk error
+!STACK 0
+java.nio.file.AccessDeniedException: C:\ProgramData\NXP\mcu_data_v12\expansion_headers\dir.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.copy(Unknown Source)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.unzipStream(CopyTask2.java:432)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.run(CopyTask2.java:371)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadDataForSdk(KExProcessorsProvider.java:1437)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadOrUpdateConfigs(KExProcessorsProvider.java:963)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.checkOrDownloadCommonConfig(KExProcessorsProvider.java:1005)
+	at com.nxp.swtools.utils.importer.PreparedImportStatus.preparePrjImport(PreparedImportStatus.java:156)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.lambda$1(ImportToolchainProjectFactory.java:166)
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(Unknown Source)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.importSourcesFromProject(ImportToolchainProjectFactory.java:162)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.importToolchainProject(ImportToolchainProjectFactory.java:366)
+	at com.nxp.swtools.eclipse.handlers.OpenMexForProject.importToolchainConfigurationForProject(OpenMexForProject.java:129)
+	at com.nxp.swtools.eclipse.handlers.OpenMexForProject.lambda$1(OpenMexForProject.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY com.nxp.swtools.provider.processors 4 0 2023-11-15 16:26:41.818
+!MESSAGE Copying data from web - disk error
+!STACK 0
+java.nio.file.AccessDeniedException: C:\ProgramData\NXP\mcu_data_v12\expansion_headers\dir.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.copy(Unknown Source)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.unzipStream(CopyTask2.java:432)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.run(CopyTask2.java:371)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadDataForSdk(KExProcessorsProvider.java:1437)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadOrUpdateConfigs(KExProcessorsProvider.java:963)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.checkOrDownloadCommonConfig(KExProcessorsProvider.java:1005)
+	at com.nxp.swtools.utils.importer.PreparedImportStatus.preparePrjImport(PreparedImportStatus.java:156)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.lambda$1(ImportToolchainProjectFactory.java:166)
+	at java.base/java.util.LinkedHashMap$LinkedValues.forEach(Unknown Source)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.importSourcesFromProject(ImportToolchainProjectFactory.java:162)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.importToolchainProject(ImportToolchainProjectFactory.java:366)
+	at com.nxp.swtools.eclipse.handlers.OpenMexForProject.importToolchainConfigurationForProject(OpenMexForProject.java:129)
+	at com.nxp.swtools.eclipse.handlers.OpenMexForProject.lambda$1(OpenMexForProject.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY com.nxp.swtools.provider.processors 4 0 2023-11-15 16:26:42.329
+!MESSAGE Copying data from web - disk error
+!STACK 0
+java.nio.file.AccessDeniedException: C:\ProgramData\NXP\mcu_data_v12\expansion_headers\dir.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.deleteIfExists(Unknown Source)
+	at java.base/java.nio.file.Files.copy(Unknown Source)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.unzipStream(CopyTask2.java:432)
+	at com.nxp.swtools.kex.storage.utils.CopyTask2.run(CopyTask2.java:371)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadDataForSdk(KExProcessorsProvider.java:1437)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.downloadOrUpdateConfigs(KExProcessorsProvider.java:963)
+	at com.nxp.swtools.provider.processors.KExProcessorsProvider.checkOrDownloadCommonConfig(KExProcessorsProvider.java:1005)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.importSourcesFromProject(ImportToolchainProjectFactory.java:209)
+	at com.nxp.swtools.sdkproject.ImportToolchainProjectFactory.importToolchainProject(ImportToolchainProjectFactory.java:366)
+	at com.nxp.swtools.eclipse.handlers.OpenMexForProject.importToolchainConfigurationForProject(OpenMexForProject.java:129)
+	at com.nxp.swtools.eclipse.handlers.OpenMexForProject.lambda$1(OpenMexForProject.java:185)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.455
+!MESSAGE [TOOL] Could not find any matching component for type ostimer
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.491
+!MESSAGE [TOOL] Could not find any matching component for type sctimer
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.552
+!MESSAGE [TOOL] Could not find any matching component for type lpc_dma
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.570
+!MESSAGE [TOOL] Could not find any matching component for type wwdt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.580
+!MESSAGE [TOOL] Could not find any matching component for type lpc_crc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.597
+!MESSAGE [TOOL] Could not find any matching component for type pint
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.607
+!MESSAGE [TOOL] Could not find any matching component for type hashcrypt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.617
+!MESSAGE [TOOL] Could not find any matching component for type mrt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.652
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2s
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.663
+!MESSAGE [TOOL] Could not find any matching component for type utick
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.673
+!MESSAGE [TOOL] Could not find any matching component for type gint
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.689
+!MESSAGE [TOOL] Could not find any matching component for type plu
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.718
+!MESSAGE [TOOL] Could not find any matching component for type lpadc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.747
+!MESSAGE [TOOL] Could not find any matching component for type cmp_1
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.763
+!MESSAGE [TOOL] Could not find any matching component for type lpc_rtc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:38:53.803
+!MESSAGE [TOOL] Could not find any matching component for type hashcrypt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:44.298
+!MESSAGE [TOOL] Could not find any matching component for type usb
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:44.308
+!MESSAGE [TOOL] Could not find any matching component for type freemaster
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:44.319
+!MESSAGE [TOOL] Could not find any matching component for type fatfs
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:44.326
+!MESSAGE [TOOL] Could not find any matching component for type usb
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:44.336
+!MESSAGE [TOOL] Could not find any matching component for type fatfs
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:48.910
+!MESSAGE [TOOL] Could not find any matching component for type ostimer
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:48.945
+!MESSAGE [TOOL] Could not find any matching component for type sctimer
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.006
+!MESSAGE [TOOL] Could not find any matching component for type lpc_dma
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.022
+!MESSAGE [TOOL] Could not find any matching component for type wwdt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.032
+!MESSAGE [TOOL] Could not find any matching component for type lpc_crc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.049
+!MESSAGE [TOOL] Could not find any matching component for type pint
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.059
+!MESSAGE [TOOL] Could not find any matching component for type hashcrypt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.069
+!MESSAGE [TOOL] Could not find any matching component for type mrt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.104
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2s
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.114
+!MESSAGE [TOOL] Could not find any matching component for type utick
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.125
+!MESSAGE [TOOL] Could not find any matching component for type gint
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.141
+!MESSAGE [TOOL] Could not find any matching component for type plu
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.170
+!MESSAGE [TOOL] Could not find any matching component for type lpadc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.199
+!MESSAGE [TOOL] Could not find any matching component for type cmp_1
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.215
+!MESSAGE [TOOL] Could not find any matching component for type lpc_rtc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:41:49.248
+!MESSAGE [TOOL] Could not find any matching component for type hashcrypt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.627
+!MESSAGE [TOOL] Could not find any matching component for type lpc_gpio_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.637
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2c_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.647
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_usart_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.657
+!MESSAGE [TOOL] Could not find any matching component for type gint_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.666
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_spi_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.673
+!MESSAGE [TOOL] Could not find any matching component for type lpc_gpio_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.680
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2c_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.686
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_usart_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.693
+!MESSAGE [TOOL] Could not find any matching component for type gint_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:17.700
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_spi_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:25.372
+!MESSAGE [TOOL] Could not find any matching component for type sctimer_reg
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:25.378
+!MESSAGE [TOOL] Could not find any matching component for type sctimer_reg
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:27.700
+!MESSAGE [TOOL] Could not find any matching component for type mpu_utility
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:27.713
+!MESSAGE [TOOL] Could not find any matching component for type mpu_utility
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:31.051
+!MESSAGE [TOOL] Could not find any matching component for type custom_sw_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:31.054
+!MESSAGE [TOOL] Could not find any matching component for type custom_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:31.061
+!MESSAGE [TOOL] Could not find any matching component for type custom_sw_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:31.068
+!MESSAGE [TOOL] Could not find any matching component for type custom_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:33.751
+!MESSAGE [TOOL] Could not find any matching component for type usb
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:33.761
+!MESSAGE [TOOL] Could not find any matching component for type freemaster
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:33.771
+!MESSAGE [TOOL] Could not find any matching component for type fatfs
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:33.778
+!MESSAGE [TOOL] Could not find any matching component for type usb
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:33.788
+!MESSAGE [TOOL] Could not find any matching component for type fatfs
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.566
+!MESSAGE [TOOL] Could not find any matching component for type lpc_gpio_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.576
+!MESSAGE [TOOL] Could not find any matching component for type ostimer
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.618
+!MESSAGE [TOOL] Could not find any matching component for type sctimer
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.650
+!MESSAGE [TOOL] Could not find any matching component for type usb
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.675
+!MESSAGE [TOOL] Could not find any matching component for type lpc_dma
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.693
+!MESSAGE [TOOL] Could not find any matching component for type wwdt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.711
+!MESSAGE [TOOL] Could not find any matching component for type pint
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.723
+!MESSAGE [TOOL] Could not find any matching component for type hashcrypt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.761
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2s
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.766
+!MESSAGE [TOOL] Could not find any matching component for type custom_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.777
+!MESSAGE [TOOL] Could not find any matching component for type gint
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.796
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_spi_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.821
+!MESSAGE [TOOL] Could not find any matching component for type cmp_1
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.839
+!MESSAGE [TOOL] Could not find any matching component for type lpc_rtc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.843
+!MESSAGE [TOOL] Could not find any matching component for type sctimer_reg
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.847
+!MESSAGE [TOOL] Could not find any matching component for type mpu_utility
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.899
+!MESSAGE [TOOL] Could not find any matching component for type lpc_crc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.911
+!MESSAGE [TOOL] Could not find any matching component for type gint_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.922
+!MESSAGE [TOOL] Could not find any matching component for type fatfs
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.933
+!MESSAGE [TOOL] Could not find any matching component for type mrt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.937
+!MESSAGE [TOOL] Could not find any matching component for type custom_sw_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.948
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2c_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.960
+!MESSAGE [TOOL] Could not find any matching component for type utick
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.971
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_usart_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.975
+!MESSAGE [TOOL] Could not find any matching component for type i2c_cmsis_common
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:36.993
+!MESSAGE [TOOL] Could not find any matching component for type plu
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.025
+!MESSAGE [TOOL] Could not find any matching component for type lpadc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.036
+!MESSAGE [TOOL] Could not find any matching component for type freemaster
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.047
+!MESSAGE [TOOL] Could not find any matching component for type spi_cmsis_common
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.058
+!MESSAGE [TOOL] Could not find any matching component for type lpc_gpio_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.075
+!MESSAGE [TOOL] Could not find any matching component for type usb
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.091
+!MESSAGE [TOOL] Could not find any matching component for type hashcrypt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.134
+!MESSAGE [TOOL] Could not find any matching component for type custom_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.147
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_spi_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.160
+!MESSAGE [TOOL] Could not find any matching component for type sctimer_reg
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.167
+!MESSAGE [TOOL] Could not find any matching component for type mpu_utility
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.180
+!MESSAGE [TOOL] Could not find any matching component for type gint_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.187
+!MESSAGE [TOOL] Could not find any matching component for type fatfs
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.197
+!MESSAGE [TOOL] Could not find any matching component for type custom_sw_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.204
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2c_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.214
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_usart_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.221
+!MESSAGE [TOOL] Could not find any matching component for type i2c_cmsis_common
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 16:42:37.240
+!MESSAGE [TOOL] Could not find any matching component for type spi_cmsis_common
+
+!ENTRY com.crt.utils 1 0 2023-11-15 17:04:44.304
+!MESSAGE Connected to 127.0.0.1 on port 2337.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 17:04:45.143
+!MESSAGE Telnet session connected on port 2338->55717 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 17:04:50.391
+!MESSAGE Target not available.
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.347
+!MESSAGE [TOOL] Could not find any matching component for type lpc_gpio_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.358
+!MESSAGE [TOOL] Could not find any matching component for type ostimer
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.393
+!MESSAGE [TOOL] Could not find any matching component for type sctimer
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.422
+!MESSAGE [TOOL] Could not find any matching component for type usb
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.444
+!MESSAGE [TOOL] Could not find any matching component for type lpc_dma
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.461
+!MESSAGE [TOOL] Could not find any matching component for type wwdt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.477
+!MESSAGE [TOOL] Could not find any matching component for type pint
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.487
+!MESSAGE [TOOL] Could not find any matching component for type hashcrypt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.521
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2s
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.525
+!MESSAGE [TOOL] Could not find any matching component for type custom_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.535
+!MESSAGE [TOOL] Could not find any matching component for type gint
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.552
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_spi_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.575
+!MESSAGE [TOOL] Could not find any matching component for type cmp_1
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.592
+!MESSAGE [TOOL] Could not find any matching component for type lpc_rtc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.595
+!MESSAGE [TOOL] Could not find any matching component for type sctimer_reg
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.599
+!MESSAGE [TOOL] Could not find any matching component for type mpu_utility
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.647
+!MESSAGE [TOOL] Could not find any matching component for type lpc_crc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.657
+!MESSAGE [TOOL] Could not find any matching component for type gint_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.667
+!MESSAGE [TOOL] Could not find any matching component for type fatfs
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.677
+!MESSAGE [TOOL] Could not find any matching component for type mrt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.681
+!MESSAGE [TOOL] Could not find any matching component for type custom_sw_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.691
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2c_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.701
+!MESSAGE [TOOL] Could not find any matching component for type utick
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.711
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_usart_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.715
+!MESSAGE [TOOL] Could not find any matching component for type i2c_cmsis_common
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.731
+!MESSAGE [TOOL] Could not find any matching component for type plu
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.760
+!MESSAGE [TOOL] Could not find any matching component for type lpadc
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.770
+!MESSAGE [TOOL] Could not find any matching component for type freemaster
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.781
+!MESSAGE [TOOL] Could not find any matching component for type spi_cmsis_common
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.787
+!MESSAGE [TOOL] Could not find any matching component for type lpc_gpio_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.803
+!MESSAGE [TOOL] Could not find any matching component for type usb
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.818
+!MESSAGE [TOOL] Could not find any matching component for type hashcrypt
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.830
+!MESSAGE [TOOL] Could not find any matching component for type custom_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.843
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_spi_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.855
+!MESSAGE [TOOL] Could not find any matching component for type sctimer_reg
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.874
+!MESSAGE [TOOL] Could not find any matching component for type mpu_utility
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.887
+!MESSAGE [TOOL] Could not find any matching component for type gint_adapter
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.894
+!MESSAGE [TOOL] Could not find any matching component for type fatfs
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.904
+!MESSAGE [TOOL] Could not find any matching component for type custom_sw_init
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.910
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_i2c_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.920
+!MESSAGE [TOOL] Could not find any matching component for type flexcomm_usart_cmsis
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.927
+!MESSAGE [TOOL] Could not find any matching component for type i2c_cmsis_common
+
+!ENTRY com.nxp.swtools.periphs.gui.view 4 0 2023-11-15 17:11:58.945
+!MESSAGE [TOOL] Could not find any matching component for type spi_cmsis_common
+
+!ENTRY com.crt.utils 1 0 2023-11-15 17:15:44.634
+!MESSAGE Connected to 127.0.0.1 on port 2337.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 17:15:45.515
+!MESSAGE Telnet session connected on port 2338->56131 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 17:15:53.718
+!MESSAGE Target not available.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 4 0 2023-11-15 17:19:34.335
+!MESSAGE There is already a running debug session for the launch configuration 'lpcxpresso55s69_hello_world JLink Debug'.
+
+!ENTRY com.crt.utils 1 0 2023-11-15 17:19:48.144
+!MESSAGE Connected to 127.0.0.1 on port 2337.
+
+!ENTRY com.nxp.mcuxpresso.core.debug 1 0 2023-11-15 17:19:49.016
+!MESSAGE Telnet session connected on port 2338->56213 @ 127.0.0.1
+
+!ENTRY org.eclipse.cdt.dsf 4 10001 2023-11-15 17:20:22.363
+!MESSAGE Target not available.

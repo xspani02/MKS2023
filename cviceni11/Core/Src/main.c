@@ -60,17 +60,78 @@ static void MX_USART3_UART_Init(void);
 /* USER CODE BEGIN 0 */
 int step(int a, int b, int click) {
 
-
-	      uint8_t buff[4];
-		  buff[0] = click; // stiskni leve tlacitko
-		  buff[1] = (a); // posun X +10
-		  buff[2] = (b); // posun Y -3
-		  buff[3] = 0; // bez scrollu
-		  USBD_HID_SendReport(&hUsbDeviceFS, buff, sizeof(buff));
-		  HAL_Delay(USBD_HID_GetPollingInterval(&hUsbDeviceFS));
-		return 0;
+	uint8_t buff[4];
+	buff[0] = click; // stiskni leve tlacitko
+	buff[1] = (a); // posun X +10
+	buff[2] = (b); // posun Y -3
+	buff[3] = 0; // bez scrollu
+	USBD_HID_SendReport(&hUsbDeviceFS, buff, sizeof(buff));
+	HAL_Delay(USBD_HID_GetPollingInterval(&hUsbDeviceFS));
+	return 0;
 
 }
+
+int circle(int ra) {
+	int sx = 0;
+	int sy = 0;
+	int dx;
+	int dy;
+	for (uint8_t i = 0; i < 55; i++) {
+
+		float phi = (i * 1.0 / 50) * (2 * M_PI);
+		float x = ra * cosf(phi);
+		float y = ra * sinf(phi);
+		dx = (x - sx);
+		dy = (y - sy);
+		step(dx, dy, 0x01);
+		sx += dx;
+		sy += dy;
+	}
+	step(0, 0, 0x00);
+	return 0;
+
+}
+
+int vline(int ra, int dir) {
+
+	int sy = 0;
+	int dy;
+	for (uint8_t i = 0; i < ra; i++) {
+		int y = i;
+		dy = (y - sy);
+		if (dir == 1) {
+			step(0, dy, 0x01);
+		} else if (dir == -1) {
+			step(0, -dy, 0x01);
+		}
+		sy += dy;
+	}
+	step(0, 0, 0x00);
+	return 0;
+}
+
+int hcircle(int ra, int size1, int size2, int orient) {
+	int sx = 0;
+	int sy = 0;
+	int dx;
+	int dy;
+	for (uint8_t i = size1; i < size2; i++) {
+
+		float phi = orient * (i * 1.0 / 50) * (2 * M_PI);
+		float x = ra * cosf(phi);
+		float y = ra * sinf(phi);
+		dx = (x - sx);
+		dy = (y - sy);
+		step(dx, dy, 0x01);
+		sx += dx;
+		sy += dy;
+	}
+	step(0, 0, 0x00);
+	return 0;
+
+}
+
+
 /* USER CODE END 0 */
 
 /**
@@ -104,10 +165,7 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-  int sx = 0;
-  int sy = 0;
-  int dx = 0;
-  int dy = 0;
+
 
   /* USER CODE END 2 */
 
@@ -118,22 +176,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if (HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin) == 1)
-	  {
-		  for (uint8_t i = 0; i < 60; i++)
-		  {
-			  uint8_t r = 80;
-			  float phi = (i*1.0/50)*(2*M_PI);
-			  float x = r*cosf(phi);
-			  float y = r*sinf(phi);
-		      dx = (x - sx);
-		      dy = (y - sy);
-		      step(dx, dy, 0x01);
-		      sx += dx;
-		      sy += dy;
-		  }
-		  step(0, 0, 0x00);
-	  }
+		if (HAL_GPIO_ReadPin(USER_Btn_GPIO_Port, USER_Btn_Pin) == 1) {
+			circle(100);
+			step(-30, -50, 0x00);
+			circle(10);
+			step(-60, 0, 0x00);
+			circle(10);
+			step(25, 10, 0x00);
+			vline(80, 1);
+			step(60, -100, 0x00);
+			hcircle(100, 32, 44, -1);
+
+		}
   }
   /* USER CODE END 3 */
 }

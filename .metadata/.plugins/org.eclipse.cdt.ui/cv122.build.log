@@ -1,10 +1,10 @@
-15:51:36 **** Incremental Build of configuration Debug for project cv122 ****
+17:52:04 **** Incremental Build of configuration Debug for project cv122 ****
 make -j4 all 
 arm-none-eabi-size   cv122.elf 
    text	   data	    bss	    dec	    hex	filename
- 114284	    152	  70000	 184436	  2d074	cv122.elf
+ 160936	    152	  71408	 232496	  38c30	cv122.elf
 Finished building: default.size.stdout
  
 
-15:51:37 Build Finished. 0 errors, 0 warnings. (took 864ms)
+17:52:05 Build Finished. 0 errors, 0 warnings. (took 872ms)
 

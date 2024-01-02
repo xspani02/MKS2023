@@ -2527,3 +2527,485 @@ Finished building: default.size.stdout
  
 Finished building: skouska1.list
  
+09:59:38 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:61:28: error: redeclaration of enumerator 'RESET'
+   61 | static enum { START, STOP, RESET } state = START;
+      |                            ^~~~~
+In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:30,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:29,
+                 from ../Core/Inc/stm32f0xx_hal_conf.h:193,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:171:3: note: previous definition of 'RESET' with type 'enum <anonymous>'
+  171 |   RESET = 0U,
+      |   ^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:125:27: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+  125 |                           exit(0);
+      |                           ^~~~
+../Core/Src/main.c:25:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+   24 | #include "sct.h"
+  +++ |+#include <stdlib.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:125:27: warning: incompatible implicit declaration of built-in function 'exit' [-Wbuiltin-declaration-mismatch]
+  125 |                           exit(0);
+      |                           ^~~~
+../Core/Src/main.c:125:27: note: include '<stdlib.h>' or provide a declaration of 'exit'
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+09:59:48 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:61:28: error: redeclaration of enumerator 'RESET'
+   61 | static enum { START, STOP, RESET } state = START;
+      |                            ^~~~~
+In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:30,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:29,
+                 from ../Core/Inc/stm32f0xx_hal_conf.h:193,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:171:3: note: previous definition of 'RESET' with type 'enum <anonymous>'
+  171 |   RESET = 0U,
+      |   ^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:125:27: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+  125 |                           exit();
+      |                           ^~~~
+../Core/Src/main.c:25:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+   24 | #include "sct.h"
+  +++ |+#include <stdlib.h>
+   25 | /* USER CODE END Includes */
+../Core/Src/main.c:125:27: warning: incompatible implicit declaration of built-in function 'exit' [-Wbuiltin-declaration-mismatch]
+  125 |                           exit();
+      |                           ^~~~
+../Core/Src/main.c:125:27: note: include '<stdlib.h>' or provide a declaration of 'exit'
+../Core/Src/main.c:125:27: error: too few arguments to function 'exit'
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:02:27 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:61:28: error: redeclaration of enumerator 'RESET'
+   61 | static enum { START, STOP, RESET } state = START;
+      |                            ^~~~~
+In file included from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h:30,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h:29,
+                 from ../Core/Inc/stm32f0xx_hal_conf.h:193,
+                 from ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h:30,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h:171:3: note: previous definition of 'RESET' with type 'enum <anonymous>'
+  171 |   RESET = 0U,
+      |   ^~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:125:27: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+  125 |                           return;
+      |                           ^~~~~~
+../Core/Src/main.c:80:5: note: declared here
+   80 | int main(void)
+      |     ^~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:03:01 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:125:27: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+  125 |                           return;
+      |                           ^~~~~~
+../Core/Src/main.c:80:5: note: declared here
+   80 | int main(void)
+      |     ^~~~
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7636	     20	   1716	   9372	   249c	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:04:54 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:27: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+  124 |                           return;
+      |                           ^~~~~~
+../Core/Src/main.c:80:5: note: declared here
+   80 | int main(void)
+      |     ^~~~
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7636	     20	   1716	   9372	   249c	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:06:13 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:27: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+  127 |                           return;
+      |                           ^~~~~~
+../Core/Src/main.c:80:5: note: declared here
+   80 | int main(void)
+      |     ^~~~
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7644	     20	   1716	   9380	   24a4	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:06:36 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-size   skouska1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7644	     20	   1716	   9380	   24a4	skouska1.elf
+Finished building: default.size.stdout
+ 
+10:06:49 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-size   skouska1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7644	     20	   1716	   9380	   24a4	skouska1.elf
+Finished building: default.size.stdout
+ 
+10:08:08 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:128:19: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+  128 |                   return;
+      |                   ^~~~~~
+../Core/Src/main.c:80:5: note: declared here
+   80 | int main(void)
+      |     ^~~~
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7644	     20	   1716	   9380	   24a4	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:09:41 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7604	     20	   1716	   9340	   247c	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:09:53 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-size   skouska1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7604	     20	   1716	   9340	   247c	skouska1.elf
+Finished building: default.size.stdout
+ 
+10:12:09 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7628	     20	   1716	   9364	   2494	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:13:06 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7648	     20	   1716	   9384	   24a8	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:15:25 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7628	     20	   1716	   9364	   2494	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:20:14 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7628	     20	   1716	   9364	   2494	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:23:52 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'hodiny':
+../Core/Src/main.c:73:34: warning: unused variable 'freeze' [-Wunused-variable]
+   73 |                         uint32_t freeze = i;
+      |                                  ^~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:132:29: error: 'freeze' undeclared (first use in this function)
+  132 |                   sct_value(freeze);
+      |                             ^~~~~~
+../Core/Src/main.c:132:29: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:24:20 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7660	     20	   1716	   9396	   24b4	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:25:28 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'hodiny':
+../Core/Src/main.c:75:25: warning: implicit declaration of function 'HALdelay'; did you mean 'HAL_Delay'? [-Wimplicit-function-declaration]
+   75 |                         HALdelay(30);
+      |                         ^~~~~~~~
+      |                         HAL_Delay
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/appz/ST/STM32CubeIDE_1.10.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.0.202305231506/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `hodiny':
+C:/Users/xspani02/Documents/MKS2023/skouska1/Debug/../Core/Src/main.c:75: undefined reference to `HALdelay'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: skouska1.elf] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+10:26:41 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7740	     20	   1716	   9476	   2504	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:27:58 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7744	     20	   1716	   9480	   2508	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:29:55 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7736	     20	   1716	   9472	   2500	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:31:32 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:25: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+  131 |                         return;
+      |                         ^~~~~~
+../Core/Src/main.c:80:5: note: declared here
+   80 | int main(void)
+      |     ^~~~
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7744	     20	   1716	   9480	   2508	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:32:02 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-size   skouska1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7744	     20	   1716	   9480	   2508	skouska1.elf
+Finished building: default.size.stdout
+ 
+10:32:24 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7732	     20	   1716	   9468	   24fc	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:35:37 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7704	     20	   1716	   9440	   24e0	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:36:16 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7704	     20	   1716	   9440	   24e0	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:37:32 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7704	     20	   1716	   9440	   24e0	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:39:43 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7652	     20	   1724	   9396	   24b4	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:40:10 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7660	     20	   1724	   9404	   24bc	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:41:12 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7660	     20	   1724	   9404	   24bc	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 
+10:42:14 **** Incremental Build of configuration Debug for project skouska1 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F030x8 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "skouska1.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xspani02\Documents\MKS2023\skouska1\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="skouska1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: skouska1.elf
+ 
+arm-none-eabi-size   skouska1.elf 
+arm-none-eabi-objdump -h -S  skouska1.elf  > "skouska1.list"
+   text	   data	    bss	    dec	    hex	filename
+   7660	     20	   1724	   9404	   24bc	skouska1.elf
+Finished building: default.size.stdout
+ 
+Finished building: skouska1.list
+ 

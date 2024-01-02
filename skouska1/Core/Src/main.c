@@ -32,6 +32,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define STEP 100
+#define STEPW 60
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -58,6 +59,7 @@ static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN 0 */
 volatile uint32_t Tick;
 uint32_t i = 0;
+static enum { NOTHING, START, STOP, RST } state = NOTHING;
 
 void hodiny(void) {
 
@@ -103,7 +105,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   sct_init();
-  sct_value(22);
+  sct_value(0);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,7 +115,28 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  hodiny();
+	  static uint32_t delay2;
+	  if (Tick > delay2 + STEPW) {
+		  if (HAL_GPIO_ReadPin(S2_GPIO_Port, S2_Pin) == 0)
+		  {
+			  state++;
+		  }
+		  delay2 = Tick;
+	  }
+	  if (state == START)
+	  {
+		  hodiny();
+	  }
+
+	  if (state == STOP){
+
+
+	  }
+	  if (state == RST)
+	  {
+		  i = 0;
+		  state = NOTHING;
+	  }
 
   }
   /* USER CODE END 3 */
